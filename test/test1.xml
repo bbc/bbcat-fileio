@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ebuCoreMain xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="urn:ebu:metadata-schema:ebuCore_2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schema="EBU_CORE_20140201.xsd" xml:lang="en">
+	<coreMetadata>
+		<format>
+			<audioFormatExtended>
+				<audioProgramme audioProgrammeID="APR_1001" audioProgrammeName="Applause">
+					<audioContentIDRef>ACO_1001</audioContentIDRef>
+				</audioProgramme>
+				<audioContent audioContentID="ACO_1001" audioContentName="Applause">
+					<audioObjectIDRef>AO_1001</audioObjectIDRef>
+				</audioContent>
+				<audioObject audioObjectID="AO_1001" audioObjectName="Applause">
+					<audioPackFormatIDRef>AP_00031001</audioPackFormatIDRef>
+					<audioTrackUIDRef>ATU_00000001</audioTrackUIDRef>
+				</audioObject>
+				<audioPackFormat audioPackFormatID="AP_00031001" audioPackFormatName="Applause" typeLabel="0003" typeDefinition="Objects">
+					<audioChannelFormatIDRef>AC_00031001</audioChannelFormatIDRef>
+				</audioPackFormat>
+				<audioChannelFormat audioChannelFormatID="AC_00031001" audioChannelFormatName="Applause1" typeLabel="0003" typeDefinition="Objects">
+					<audioBlockFormat audioBlockFormatID="AB_00031001_00000001" rtime="00:00:00.00000" duration="00:00:01.00000">
+						<cartesian>0</cartesian>
+						<position coordinate="azimuth">0.000000</position>
+						<position coordinate="elevation">0.000000</position>
+						<position coordinate="distance">1.000000</position>
+						<diffuse>0.089000</diffuse>
+						<objectDivergence azimuthRange="45.000000">0.700000</objectDivergence>
+						<channelLock maxDistance="1.700000">1</channelLock>
+						<zoneExclusion>
+							<zone maxX="1.000000" maxY="1.000000" maxZ="1.000000" minX="-1.000000" minY="-1.000000" minZ="-1.000000">Left wall</zone>
+						</zoneExclusion>
+					</audioBlockFormat>
+					<audioBlockFormat audioBlockFormatID="AB_00031001_00000002" rtime="00:00:01.00000" duration="00:00:01.00000">
+						<cartesian>0</cartesian>
+						<position coordinate="azimuth">90.000000</position>
+						<position coordinate="elevation">0.000000</position>
+						<position coordinate="distance">1.000000</position>
+						<diffuse>0.200000</diffuse>
+						<objectDivergence azimuthRange="45.000000">0.300000</objectDivergence>
+						<channelLock maxDistance="1.100000">1</channelLock>
+						<zoneExclusion>
+							<zone maxX="2.000000" maxY="2.100000" maxZ="2.200000" minX="-2.000000" minY="-2.100000" minZ="-2.200000">Left wall</zone>
+							<zone maxX="3.000000" maxY="3.100000" maxZ="3.200000" minX="-3.000000" minY="-3.100000" minZ="-3.200000">Left wall 2</zone>
+						</zoneExclusion>
+					</audioBlockFormat>
+				</audioChannelFormat>
+				<audioTrackUID UID="ATU_00000001" sampleRate="48000" bitDepth="24" />
+			</audioFormatExtended>
+		</format>
+	</coreMetadata>
+</ebuCoreMain>

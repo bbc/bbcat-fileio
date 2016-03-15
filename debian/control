@@ -1,0 +1,20 @@
+Source: bbcat-fileio
+Priority: optional
+Maintainer: Richard Day <richard.day@bbc.co.uk>
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 9), pkg-config, libbbcat-base-dev (>= 0.1.2.1), libbbcat-dsp-dev (>= 0.1.2.1), libbbcat-control-dev (>= 0.1.2.1), libbbcat-render-dev (>= 0.1.2.1), libbbcat-audioobjects-dev (>= 0.1.2.1), libtinyxml-dev (>= 2.6.2), json-spirit-dev (>= 4.0.6), libboost-test-dev (>= 1.49.0)
+
+Package: libbbcat-fileio
+Section: libs
+Architecture: any
+Multi-Arch: same
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: File I/O for BBC Audio Toolbox, shared library
+
+Package: libbbcat-fileio-dev
+Section: libdevel
+Architecture: any
+Multi-Arch: same
+Depends: libbbcat-fileio (=${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: File I/O for BBC Audio Toolbox, development files

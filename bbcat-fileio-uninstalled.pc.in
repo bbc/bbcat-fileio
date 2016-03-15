@@ -1,0 +1,10 @@
+prefix=
+exec_prefix=
+libdir=${pcfiledir}/bbcat-fileio/
+includedir=${pcfiledir}/
+
+Name: bbcat-fileio-@BBCAT_FILEIO_MAJORMINOR@ uninstalled
+Description: File I/O for BBC Audio Toolbox
+Version: @VERSION@
+Libs: -L${libdir} -lbbcat-fileio-@BBCAT_FILEIO_MAJORMINOR@
+Cflags: -I${includedir} -I@srcdir@

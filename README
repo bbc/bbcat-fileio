@@ -1,0 +1,143 @@
+Purpose
+
+File I/O for BBC Audio Toolbox
+
+Dependencies
+
+bbcat-base - https://github.com/bbcrd/bbcat-base.git
+bbcat-dsp - https://github.com/bbcrd/bbcat-dsp.git
+bbcat-adm - https://github.com/bbcrd/bbcat-adm.git
+tinyxml
+
+Files
+
+autogen.sh - simple autotools script
+configure.ac - configure configuration for autotools
+COPYING - information on copying this library
+debian/ - Debian control and version information
+doxygen.am - Doxygen automake file
+doxygen.cfg - Doxygen configuration
+m4 - folder for autotools
+Makefile.am - makefile for automake
+README - this file
+src/ - source folder containing C/C++ source and header files
+examples/ - folder with example C++ files (just type make)
+
+src/ADMAudioFileSamples.cpp             | Handler for reading audio samples AND position from ADM object and BWF file 
+src/ADMAudioFileSamples.h               |
+
+src/ADMData.cpp                         | Base class for ADM data handlers (NOTE: this no longer supports axml and chna chunk handling directly)
+src/ADMData.h                           |
+
+src/ADMObjects.cpp                      | Individual component ADM objects
+src/ADMObjects.h                        |
+
+src/ADMRIFFFile.cpp                     | ADM RIFF (BWF) file support
+src/ADMRIFFFile.h                       |
+
+src/Makefile.am                         | Makefile for automake
+
+src/Playlist.cpp                        | Simple multi-file playlist
+src/Playlist.h                          |
+
+src/RIFFChunk_Definitions.h             | RIFF chunk definitions
+
+src/RIFFChunk.cpp                       | Base class for RIFF chunk handlers
+src/RIFFChunk.h                         |
+
+src/RIFFChunks.cpp                      | RIFF chunk handlers
+src/RIFFChunks.h                        |
+
+src/RIFFFile.cpp                        | RIFF file support
+src/RIFFFile.h                          |
+
+src/SoundFileAttributes.cpp             | Sound format and data classes
+src/SoundFileAttributes.h               |
+
+src/SoundObjectFile.cpp                 | A version of the SoundFileSamples class which uses AudioObjectCursors to read channel parameters from a sound file
+src/SoundObjectFile.h                   |
+
+src/TinyXMLADMData.cpp                  | An implementation of ADM decoding using TinyXML
+src/TinyXMLADMData.h                    |
+
+src/XMLADMData.cpp                      | Extension to ADMData to handle axml and chna chunks encoding and decoding (via explicit implementations like TinyXMLADMData)
+src/XMLADMData.h                        |
+
+examples/read-adm-bwf.cpp               | Example code for reading and decoding an ADM file
+
+examples/write-adm-bwf.cpp              | Example code for writing an ADM file
+
+examples/create-adm.cpp                 | Example code for creating an ADM object without using a RIFF file
+
+examples/load-xml.cpp					| Example code for loading ADM xml and chna chunks in directly
+
+examples/write-separate-adm.cpp         | Example code for creating a separate ADM and then adding to a WAV file being written
+
+examples/udp-demo.cpp                   | Simple demonstration of threading and UDP socket handling
+
+examples/play-metadata.cpp              | Example of reading in an XML file and displaying the metadata over time
+
+examples/modify-adm-bwf.cpp             | Example of reading an ADM BWF file, copying and modifying the ADM (adding arbitrary XML) and writing it to a new file along with the original audio
+
+examples/map-adm-bwf.cpp				| Uses dot to generate an SVG map of the ADM of a BWF file
+
+--------------------------------------------------------------------------------
+Building on Windows (Visual Studio)
+
+Follow the installation instructions for bbcat-base (https://github.com/bbcrd/bbcat-base)
+
+Use git-bash to change to the directory where the libraries are to be cloned to
+
+Clone source code, if necessary:
+git clone git@github.com:bbcrd/bbcat-fileio.git
+
+cd bbcat-fileio
+mkdir build
+cd build
+cmake -G "Visual Studio 14 2015 Win64" .. && cmake --build . --target INSTALL --config Release
+(or whatever version of Visual Studio you are using)
+
+Building the examples
+
+cd examples
+mkdir build
+cd build
+cmake -G "Visual Studio 14 2015 Win64" .. && cmake --build . --target ALL_BUILD --config Release 
+cd Release
+
+Notes on Windows builds
+
+As there is no standardised directories for cmake files, libraries, etc. the build *assumes* that:
+1. Library includes, libs and shared files will be stored in c:\local\bbcat
+2. CMake configuration files will be stored in c:\local\cmake
+3. TinyXML is downloaded into c:\local and built (Release version)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Building on Mac and Linux
+
+There are two build mechanisms supported: autotools and cmake
+
+autotools:
+./autogen.sh && configure && make && sudo make install
+
+cmake:
+mkdir build ; cd build ; cmake .. && make && sudo make install
+
+Building the examples
+
+cd examples
+
+then, for autotools:
+./autogen.sh && configure && make
+
+or, for cmake:
+mkdir build ; cd build ; cmake .. && make
+--------------------------------------------------------------------------------
+
+With the examples built:
+
+./write-adm-bwf
+./read-adm-bwf adm-bwf.wav
+./create-adm
+./write-separate-adm adm-bwf-2.wav

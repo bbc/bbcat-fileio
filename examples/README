@@ -1,0 +1,44 @@
+This directory contains some examples of using the BBC Audio Toolbox libraries
+
+create-adm.cpp - example code for creating an ADM (in XML form) WITHOUT using a RIFF file
+
+read-adm-bwf.cpp - example code for reading the displaying parts of the ADM and then accessing the sample data of one of the ADM audio objects
+
+write-adm-bwf.cpp - example code for creation of a simple ADM
+
+write-separate-adm.cpp - example code for creation of a simple ADM and then writing the CHNA and AXML chunks to a RIFF file
+
+load-xml.cpp - example code for loading ADM xml and chna chunks in directly
+
+map-adm-bwf.cpp - use dot to generate an SVG map of the ADM of a BWF file
+
+udp-demo.cpp - example of using UDP port, threading and a lock-free buffer
+
+play-metadata.cpp - example of reading in an XML file and displaying the metadata over time
+
+modify-adm-bwf.cpp - example of reading an ADM BWF file, copying and modifying the ADM (adding arbitrary XML) and writing it to a new file along with the original audio
+
+--------------------------------------------------------------------------------
+Building on Windows (Visual Studio)
+
+mkdir build
+cd build
+cmake -G "Visual Studio 14 2015 Win64" .. && cmake --build . --target ALL_BUILD --config Release 
+cd Release
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Building on Mac and Linux
+
+for autotools:
+./autogen.sh && configure && make
+
+for cmake:
+mkdir build ; cd build ; cmake .. && make
+--------------------------------------------------------------------------------
+
+With the examples built:
+
+./write-adm-bwf
+./read-adm-bwf adm-bwf.wav
+./create-adm

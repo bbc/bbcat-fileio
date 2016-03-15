@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ebuCoreMain xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns="urn:ebu:metadata-schema:ebuCore_2014" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schema="EBU_CORE_20140201.xsd" xml:lang="en">
+   <coreMetadata>
+        <format>
+            <audioFormatExtended>
+                <audioProgramme audioProgrammeID="APR_1001" audioProgrammeName="Applause">
+                    <audioContentIDRef>ACO_1001</audioContentIDRef>
+                </audioProgramme>
+                <audioContent audioContentID="ACO_1001" audioContentName="Applause">
+                    <audioObjectIDRef>AO_1001</audioObjectIDRef>
+                </audioContent>
+                <audioObject audioObjectID="AO_1001" audioObjectName="Applause" >
+                    <audioPackFormatIDRef>AP_00031001</audioPackFormatIDRef>
+                    <audioTrackUIDRef>ATU_00000001</audioTrackUIDRef>
+                </audioObject>
+                <audioPackFormat audioPackFormatID="AP_00031001" audioPackFormatName="Applause" typeLabel="0003" typeDefinition="Objects">
+                    <audioChannelFormatIDRef>AC_00031001</audioChannelFormatIDRef>
+                </audioPackFormat>
+                <audioChannelFormat audioChannelFormatID="AC_00031001" audioChannelFormatName="Applause1" typeLabel="0003" typeDefinition="Objects">
+                    <audioBlockFormat audioBlockFormatID="AB_00031001_00000001" rtime="00:00:00.00000" duration="00:00:01.00000" >
+                        <position coordinate="azimuth" screenEdgeLock="left">0.00</position>
+                        <position coordinate="elevation" screenEdgeLock="top">0.00</position>
+                        <position coordinate="distance">1.00</position>
+                        <position coordinate="azimuth" bound="min">-30.00</position>
+                        <position coordinate="elevation" bound="min">-10.00</position>
+                        <position coordinate="distance" bound="min">.50</position>
+                        <position coordinate="azimuth" bound="max">30.00</position>
+                        <position coordinate="elevation" bound="max">10.00</position>
+                        <position coordinate="distance" bound="max">2.00</position>
+                        <diffuse>0.089</diffuse>
+                        <channelLock maxDistance="1.7">1</channelLock>
+                        <objectDivergence azimuthRange="45.0">0.7</objectDivergence>
+                        <zoneExclusion>
+                            <zone minX="-1.0" maxX="1.0" minY="-1.0" maxY="1.0" minZ="-1.0" maxZ="1.0">Left wall</zone>
+                        </zoneExclusion>
+                    </audioBlockFormat>
+                    <audioBlockFormat audioBlockFormatID="AB_00031001_00000002" rtime="00:00:01.00000" duration="00:00:01.00000" >
+                        <position coordinate="azimuth">90.00</position>
+                        <position coordinate="elevation">0.00</position>
+                        <position coordinate="distance">1.00</position>
+                        <diffuse>0.2</diffuse>
+                        <channelLock maxDistance="1.1">1</channelLock>
+                        <objectDivergence azimuthRange="45.0">.3</objectDivergence>
+                        <zoneExclusion>
+                            <zone minX="-2.0" maxX="2.0" minY="-2.1" maxY="2.1" minZ="-2.2" maxZ="2.2">Left wall</zone>
+                            <zone minX="-3.0" maxX="3.0" minY="-3.1" maxY="3.1" minZ="-3.2" maxZ="3.2">Left wall 2</zone>
+                        </zoneExclusion>
+                    </audioBlockFormat>
+                </audioChannelFormat>
+                <audioStreamFormat audioStreamFormatID="AS_00011001" audioStreamFormatName="PCM_Applause1" formatLabel="0001" formatDefinition="PCM">
+                    <audioChannelFormatIDRef>AC_00031001</audioChannelFormatIDRef>
+                    <audioTrackFormatIDRef>AT_00011001_01</audioTrackFormatIDRef>
+                </audioStreamFormat>
+                <audioTrackFormat audioTrackFormatID="AT_00011001_01" audioTrackFormatName="PCM_Applause1" formatLabel="0001" formatDefinition="PCM">
+                    <audioStreamFormatIDRef>AS_00011001</audioStreamFormatIDRef>
+                </audioTrackFormat>
+                <audioTrackUID bitDepth="24" sampleRate=" 48000" UID="ATU_00000001"/>
+            </audioFormatExtended>
+        </format>
+   </coreMetadata>
+</ebuCoreMain>
