@@ -365,6 +365,9 @@ void RIFFFile::Close(bool abortwrite)
         {
           chunklist[i]->EnableRIFF64();
         }
+
+        // set length of RIFF in ds64
+        if (ds64) ds64->SetRIFFSize(totalbytes);
       }
 
       BBCDEBUG3(("Total size %s bytes", StringFrom(totalbytes).c_str()));
