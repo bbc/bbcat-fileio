@@ -67,6 +67,8 @@ examples/read-adm-bwf.cpp               | Example code for reading and decoding 
 
 examples/write-adm-bwf.cpp              | Example code for writing an ADM file
 
+examples/write-4gb-file.cpp             | Version of the above that writes a [silent] file >4GB
+
 examples/create-adm.cpp                 | Example code for creating an ADM object without using a RIFF file
 
 examples/load-xml.cpp					| Example code for loading ADM xml and chna chunks in directly

@@ -96,6 +96,9 @@ TARGET_LINK_LIBRARIES(modify-adm-bwf bbcat-base bbcat-dsp bbcat-adm bbcat-fileio
 ADD_EXECUTABLE(play-metadata play-metadata.cpp)
 TARGET_LINK_LIBRARIES(play-metadata bbcat-base bbcat-dsp bbcat-adm bbcat-fileio)
 
+ADD_EXECUTABLE(write-4gb-file write-4gb-file.cpp)
+TARGET_LINK_LIBRARIES(write-4gb-file bbcat-base bbcat-dsp bbcat-adm bbcat-fileio)
+
 set(GLOBAL_FLAGS
 	${BBCAT_FILEIO_FLAGS})
 

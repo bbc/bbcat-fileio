@@ -364,7 +364,7 @@ uint64_t RIFFds64Chunk::GetChunkSize(uint32_t id, uint64_t original_length) cons
     if      (id == RIFF_ID) length = GetRIFFSize();
     else if (id == data_ID) length = GetdataSize();
     else if (GetTableCount()) {
-      uint32_t testid;
+      uint32_t testid = 0;
       uint_t   i, n = GetTableCount();
 
       // look for chunk in table

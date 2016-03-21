@@ -24,13 +24,13 @@ int main(void)
 
   // ADM aware WAV file
   ADMRIFFFile file;
-  const char *filename = "adm-bwf.wav";
+  const char *filename = "adm-4gb-bwf.wav";
   
   // IMPORTANT: create basic ADM here - if this is not done, the file will be a plain WAV file!
   file.CreateADM();
 
   // create file
-  if (file.Create(filename, 48000, 16))
+  if (file.Create(filename, 48000, 32))
   {
     ADMData *adm = file.GetADM();
 
@@ -89,22 +89,26 @@ int main(void)
     else fprintf(stderr, "File does not have an ADM associated with it, did you forget to create one?\n");
     
     // write audio
-    std::vector<float> audio;
-    audio.resize(file.GetChannels());
+    const uint_t nchannels = file.GetChannels();
+    std::vector<sint32_t> audio;
     double fs = (double)file.GetSampleRate();
     double level = dBToGain(-40.0);
-    uint_t i, j, nsamples = 2 * file.GetSampleRate(), step = file.GetSampleRate() / 10;
+    uint64_t i, nsamples = (uint64_t)1000 * (uint64_t)file.GetSampleRate();
+    uint_t step = file.GetSampleRate() * 10;
+    uint_t j, pc = ~0;
 
-    // write 20s worth samples
-    // this is somewhat inefficient since it is only writing one frame at a time!
-    for (i = 0; i < nsamples; i++)
+    UNUSED_PARAMETER(fs);
+    UNUSED_PARAMETER(level);
+    
+    audio.resize(step * nchannels);
+
+    // write 1000s worth of samples
+    for (i = 0; i < nsamples; i += step)
     {
-      // every 1/10s set positions of channels
-      if (!(i % step))
       {
-        uint_t index = i / step;
+        uint_t index = (uint_t)(i / step);
 
-        for (j = 0; j < audio.size(); j++)
+        for (j = 0; j < nchannels; j++)
         {
           AudioObjectParameters params;
           Position pos;
@@ -140,16 +144,20 @@ int main(void)
           file.SetObjectParameters(j, params);
         }
       }
-
-      // create sine waves on each channel
-      for (j = 0; j < audio.size(); j++)
-      {
-        audio[j] = level * sin(2.0 * M_PI * 100.0 * (double)i / fs * (double)(1 + j));
-      }
-
+      
       // write a frame of audio
-      file.WriteSamples(&audio[0], 0, audio.size(), 1);
+      file.WriteSamples(&audio[0], 0, nchannels, step);
+
+      uint_t pc1 = (uint_t)((i * 100) / nsamples);
+      if (pc1 != pc)
+      {
+        pc = pc1;
+        printf("\rWriting... %u%% done", pc);
+        fflush(stdout);
+      }
     }
+
+    printf("\n");
 
     file.Close();
   }

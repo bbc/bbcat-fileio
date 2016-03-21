@@ -15,7 +15,7 @@ LDFLAGS=
 CXX = g++
 LD = g++
 
-APPLICATIONS=read-adm-bwf write-adm-bwf create-adm map-adm-bwf load-xml write-separate-adm udp-demo play-metadata modify-adm-bwf
+APPLICATIONS=read-adm-bwf write-adm-bwf create-adm map-adm-bwf load-xml write-separate-adm udp-demo play-metadata modify-adm-bwf write-4gb-file
 
 all: $(APPLICATIONS)
 
