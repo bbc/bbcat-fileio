@@ -112,7 +112,8 @@ bool RIFFChunk::ReadChunk(EnhancedFile *file, const RIFFChunkSizeHandler *sizeha
         break;
     }
   }
-  else BBCERROR("Failed to read chunk '%s' length, error %s", GetName(), strerror(file->ferror()));
+  else if (file) BBCERROR("Failed to read chunk '%s' length, error %s", GetName(), strerror(file->ferror()));
+  else BBCERROR("Failed to read chunk '%s' length, ivnalid file!", GetName());
 
   return success;
 }
@@ -152,7 +153,8 @@ bool RIFFChunk::ReadData(EnhancedFile *file)
         }
         else BBCERROR("Failed to read %s bytes for chunk '%s' data, error %s", StringFrom(length).c_str(), GetName(), strerror(file->ferror()));
       }
-      else BBCERROR("Failed to seek to position %s to read %s bytes for chunk '%s' data, error %s", StringFrom(datapos).c_str(), StringFrom(length).c_str(), GetName(), strerror(file->ferror()));
+      else if (file) BBCERROR("Failed to seek to position %s to read %s bytes for chunk '%s' data, error %s", StringFrom(datapos).c_str(), StringFrom(length).c_str(), GetName(), strerror(file->ferror()));
+      else BBCERROR("Failed to seek to position %s to read %s bytes for chunk '%s' data, invalid file!", StringFrom(datapos).c_str(), StringFrom(length).c_str(), GetName());
     }
     else BBCERROR("Failed to allocate %s bytes for chunk '%s' data", StringFrom(length).c_str(), GetName());
   }

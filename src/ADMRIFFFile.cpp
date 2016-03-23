@@ -99,7 +99,7 @@ bool ADMRIFFFile::CreateExtraChunks()
       else BBCERROR("Failed to add chna chunk");
 
       // don't need the raw data any more
-      delete[] chna;
+      free(chna);
     }
     else BBCERROR("No chna data available");
 

@@ -398,7 +398,7 @@ void TinyXMLADMData::CollectNonADMObjects(const TiXmlNode *node)
   {
     if (subnode->Type() == TiXmlNode::TINYXML_ELEMENT)
     {
-      const std::string& name = subnode->Value();
+      const std::string name = subnode->Value();
       
       if (!ValidType(name) &&
           (name != "audioFormatExtended") &&
