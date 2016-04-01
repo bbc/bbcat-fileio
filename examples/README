@@ -6,6 +6,8 @@ read-adm-bwf.cpp - example code for reading the displaying parts of the ADM and 
 
 write-adm-bwf.cpp - example code for creation of a simple ADM
 
+write-4gb-file.cpp - Version of the above that writes a [silent] file >4GB
+
 write-separate-adm.cpp - example code for creation of a simple ADM and then writing the CHNA and AXML chunks to a RIFF file
 
 load-xml.cpp - example code for loading ADM xml and chna chunks in directly

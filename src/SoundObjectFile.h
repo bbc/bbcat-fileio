@@ -36,10 +36,10 @@ public:
   virtual void GetObjectList(ADMAudioObject::LIST& list);
 
   /*--------------------------------------------------------------------------------*/
-  /** Seek to current time on all cursors
+  /** Seek to specified time on all cursors
    */
   /*--------------------------------------------------------------------------------*/
-  virtual void SeekAllCursors();
+  virtual void SeekAllCursors(uint64_t t);
   
 protected:
   const ADMData                    *adm;

@@ -38,8 +38,6 @@ void SoundObjectFileSamples::GetObjectList(ADMAudioObject::LIST& list)
   ADMAudioObject *lastobj = NULL;
   uint_t i;
 
-  SeekAllCursors();
-  
   for (i = 0; i < cursors.size(); i++)
   {
     ADMAudioObject *obj = cursors[i]->GetAudioObject();
@@ -51,17 +49,16 @@ void SoundObjectFileSamples::GetObjectList(ADMAudioObject::LIST& list)
 }
 
 /*--------------------------------------------------------------------------------*/
-/** Seek to current time on all cursors
+/** Seek to specified time on all cursors
  */
 /*--------------------------------------------------------------------------------*/
-void SoundObjectFileSamples::SeekAllCursors()
+void SoundObjectFileSamples::SeekAllCursors(uint64_t t)
 {
-  uint64_t currentns = GetAbsolutePositionNS();
   uint_t i;
   
   for (i = 0; i < cursors.size(); i++)
   {
-    cursors[i]->Seek(currentns);
+    cursors[i]->Seek(t);
   }
 }
 
