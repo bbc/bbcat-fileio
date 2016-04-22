@@ -10,9 +10,10 @@
 # CopyPolicy: Released under the terms of the LGPLv2.1 or later, see LGPL.TXT
 
 if(WIN32)
+	message("CMAKE_BUILD_TYPE is " ${CMAKE_BUILD_TYPE})
 	set(TinyXML_INSTALL_DIR "${WIN32_LIB_DESTINATION}/TinyXML")
 	set(TinyXML_INCLUDE_DIRS "${TinyXML_INSTALL_DIR}" CACHE PATH "TinyXML include directory" FORCE)
-	set(TinyXML_LIBRARY_DIRS "${TinyXML_INSTALL_DIR}/x64/Release" CACHE PATH "TinyXML library directory" FORCE)
+	set(TinyXML_LIBRARY_DIRS "${TinyXML_INSTALL_DIR}/x64/${CMAKE_BUILD_TYPE}" CACHE PATH "TinyXML library directory" FORCE)
 	set(TinyXML_LIBRARIES "${TinyXML_LIBRARY_DIRS}/tinyxmlSTL.lib" CACHE STRING "TinyXML libraries" FORCE)	
 else(WIN32)
     find_package(PkgConfig)
