@@ -11,14 +11,9 @@
 
 using namespace bbcat;
 
-// ensure the version numbers of the linked libraries and registered
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_base_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_dsp_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_adm_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_fileio_version);
-
-// ensure the TinyXMLADMData object file is kept in the application
-BBC_AUDIOTOOLBOX_REQUIRE(TinyXMLADMData);
+BBC_AUDIOTOOLBOX_START
+extern bool bbcat_register_bbcat_fileio();
+BBC_AUDIOTOOLBOX_END
 
 static std::map<std::string,std::string> colours;
 
@@ -32,7 +27,7 @@ void GenerateDisplay(std::vector<std::string>& lines, const ADMObject *obj)
 
   if ((tr = dynamic_cast<const ADMAudioTrack *>(obj)) != NULL)
   {
-    Printf(line, "Track %u", tr->GetTrackNum());
+    Printf(line, "Track %u", tr->GetTrackNum() + 1);
   }
   else Printf(line, "%s", obj->GetName().c_str());
 
@@ -73,8 +68,8 @@ bool IncludeID(const std::map<std::string,bool>& ids, const std::string id)
 
 int main(int argc, char *argv[])
 {
-  // print library versions (the actual loaded versions, if dynamically linked)
-  printf("Versions:\n%s\n", LoadedVersions::Get().GetVersionsList().c_str());
+  // ensure libraries are set up
+  bbcat_register_bbcat_fileio();
 
   if (argc < 2)
   {
@@ -131,6 +126,7 @@ int main(int argc, char *argv[])
           fp.fprintf("digraph \"%s\" {\n", argv[i]);
           fp.fprintf("\toverlap=false;\n");
           fp.fprintf("\tsplines=true;\n");
+          fp.fprintf("\tranksep=.75;\n");
 
           size_t p = 0;
           do

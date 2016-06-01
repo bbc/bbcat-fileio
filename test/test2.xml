@@ -3,69 +3,69 @@
 	<coreMetadata>
 		<format>
 			<audioFormatExtended>
-				<audioProgramme audioProgrammeID="APR_1001" audioProgrammeName="ADM Test Programme">
+				<audioProgramme audioProgrammeID="APR_1001" audioProgrammeName="ADM Test Programme" typeLabel="0000">
 					<audioContentIDRef>ACO_1001</audioContentIDRef>
 				</audioProgramme>
-				<audioContent audioContentID="ACO_1001" audioContentName="ADM Test Content">
+				<audioContent audioContentID="ACO_1001" audioContentName="ADM Test Content" typeLabel="0000">
 					<audioObjectIDRef>AO_1001</audioObjectIDRef>
 					<audioObjectIDRef>AO_1002</audioObjectIDRef>
 					<audioObjectIDRef>AO_1003</audioObjectIDRef>
 					<audioObjectIDRef>AO_1004</audioObjectIDRef>
 				</audioContent>
-				<audioObject audioObjectID="AO_1001" audioObjectName="Object 1">
+				<audioObject audioObjectID="AO_1001" audioObjectName="Object 1" typeLabel="0000">
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 					<audioTrackUIDRef>ATU_00000001</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_00000002</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_00000003</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_00000004</audioTrackUIDRef>
 				</audioObject>
-				<audioObject audioObjectID="AO_1002" audioObjectName="Object 2">
+				<audioObject audioObjectID="AO_1002" audioObjectName="Object 2" typeLabel="0000">
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 					<audioTrackUIDRef>ATU_00000005</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_00000006</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_00000007</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_00000008</audioTrackUIDRef>
 				</audioObject>
-				<audioObject audioObjectID="AO_1003" audioObjectName="Object 3">
+				<audioObject audioObjectID="AO_1003" audioObjectName="Object 3" typeLabel="0000">
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 					<audioTrackUIDRef>ATU_00000009</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_0000000a</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_0000000b</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_0000000c</audioTrackUIDRef>
 				</audioObject>
-				<audioObject audioObjectID="AO_1004" audioObjectName="Object 4">
+				<audioObject audioObjectID="AO_1004" audioObjectName="Object 4" typeLabel="0000">
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 					<audioTrackUIDRef>ATU_0000000d</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_0000000e</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_0000000f</audioTrackUIDRef>
 					<audioTrackUIDRef>ATU_00000010</audioTrackUIDRef>
 				</audioObject>
-				<audioPackFormat audioPackFormatID="AP_00001001" audioPackFormatName="Pack 1">
+				<audioPackFormat audioPackFormatID="AP_00001001" audioPackFormatName="Pack 1" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001001</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_00001002</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_00001003</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_00001004</audioChannelFormatIDRef>
 				</audioPackFormat>
-				<audioPackFormat audioPackFormatID="AP_00001002" audioPackFormatName="Pack 2">
+				<audioPackFormat audioPackFormatID="AP_00001002" audioPackFormatName="Pack 2" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001005</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_00001006</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_00001007</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_00001008</audioChannelFormatIDRef>
 				</audioPackFormat>
-				<audioPackFormat audioPackFormatID="AP_00001003" audioPackFormatName="Pack 3">
+				<audioPackFormat audioPackFormatID="AP_00001003" audioPackFormatName="Pack 3" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001009</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_0000100a</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_0000100b</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_0000100c</audioChannelFormatIDRef>
 				</audioPackFormat>
-				<audioPackFormat audioPackFormatID="AP_00001004" audioPackFormatName="Pack 4">
+				<audioPackFormat audioPackFormatID="AP_00001004" audioPackFormatName="Pack 4" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_0000100d</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_0000100e</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_0000100f</audioChannelFormatIDRef>
 					<audioChannelFormatIDRef>AC_00001010</audioChannelFormatIDRef>
 				</audioPackFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001001" audioChannelFormatName="Track 1">
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001001" audioChannelFormatName="Track 1" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -81,7 +81,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -97,7 +97,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -113,7 +113,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -129,7 +129,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -145,7 +145,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -161,7 +161,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -177,7 +177,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -193,7 +193,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -209,7 +209,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -225,7 +225,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -241,7 +241,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -257,7 +257,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -273,7 +273,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -289,7 +289,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -305,7 +305,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -321,7 +321,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -337,7 +337,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -353,7 +353,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -369,7 +369,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001001_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001001_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -386,8 +386,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001002" audioChannelFormatName="Track 2">
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001002" audioChannelFormatName="Track 2" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -403,7 +403,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -419,7 +419,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -435,7 +435,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -451,7 +451,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -467,7 +467,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -483,7 +483,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -499,7 +499,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -515,7 +515,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -531,7 +531,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -547,7 +547,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -563,7 +563,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -579,7 +579,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -595,7 +595,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -611,7 +611,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -627,7 +627,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -643,7 +643,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -659,7 +659,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -675,7 +675,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -691,7 +691,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001002_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001002_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -708,8 +708,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001003" audioChannelFormatName="Track 3">
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001003" audioChannelFormatName="Track 3" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -725,7 +725,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -741,7 +741,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -757,7 +757,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -773,7 +773,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -789,7 +789,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -805,7 +805,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -821,7 +821,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -837,7 +837,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -853,7 +853,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -869,7 +869,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -885,7 +885,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -901,7 +901,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -917,7 +917,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -933,7 +933,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -949,7 +949,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -965,7 +965,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -981,7 +981,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -997,7 +997,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -1013,7 +1013,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001003_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001003_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -1030,8 +1030,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001004" audioChannelFormatName="Track 4">
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001004" audioChannelFormatName="Track 4" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -1047,7 +1047,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -1063,7 +1063,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -1079,7 +1079,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -1095,7 +1095,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -1111,7 +1111,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -1127,7 +1127,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -1143,7 +1143,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -1159,7 +1159,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -1175,7 +1175,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -1191,7 +1191,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -1207,7 +1207,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -1223,7 +1223,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -1239,7 +1239,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -1255,7 +1255,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -1271,7 +1271,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -1287,7 +1287,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -1303,7 +1303,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -1319,7 +1319,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -1335,7 +1335,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001004_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001004_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -1352,8 +1352,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001005" audioChannelFormatName="Track 5">
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001005" audioChannelFormatName="Track 5" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -1369,7 +1369,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -1385,7 +1385,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -1401,7 +1401,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -1417,7 +1417,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -1433,7 +1433,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -1449,7 +1449,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -1465,7 +1465,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -1481,7 +1481,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -1497,7 +1497,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -1513,7 +1513,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -1529,7 +1529,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -1545,7 +1545,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -1561,7 +1561,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -1577,7 +1577,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -1593,7 +1593,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -1609,7 +1609,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -1625,7 +1625,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -1641,7 +1641,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -1657,7 +1657,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001005_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001005_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -1674,8 +1674,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001006" audioChannelFormatName="Track 6">
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001006" audioChannelFormatName="Track 6" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -1691,7 +1691,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -1707,7 +1707,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -1723,7 +1723,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -1739,7 +1739,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -1755,7 +1755,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -1771,7 +1771,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -1787,7 +1787,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -1803,7 +1803,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -1819,7 +1819,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -1835,7 +1835,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -1851,7 +1851,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -1867,7 +1867,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -1883,7 +1883,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -1899,7 +1899,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -1915,7 +1915,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -1931,7 +1931,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -1947,7 +1947,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -1963,7 +1963,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -1979,7 +1979,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001006_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001006_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -1996,8 +1996,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001007" audioChannelFormatName="Track 7">
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001007" audioChannelFormatName="Track 7" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -2013,7 +2013,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -2029,7 +2029,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -2045,7 +2045,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -2061,7 +2061,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -2077,7 +2077,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -2093,7 +2093,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -2109,7 +2109,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -2125,7 +2125,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -2141,7 +2141,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -2157,7 +2157,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -2173,7 +2173,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -2189,7 +2189,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -2205,7 +2205,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -2221,7 +2221,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -2237,7 +2237,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -2253,7 +2253,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -2269,7 +2269,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -2285,7 +2285,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -2301,7 +2301,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001007_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001007_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -2318,8 +2318,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001008" audioChannelFormatName="Track 8">
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001008" audioChannelFormatName="Track 8" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -2335,7 +2335,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -2351,7 +2351,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -2367,7 +2367,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -2383,7 +2383,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -2399,7 +2399,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -2415,7 +2415,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -2431,7 +2431,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -2447,7 +2447,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -2463,7 +2463,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -2479,7 +2479,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -2495,7 +2495,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -2511,7 +2511,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -2527,7 +2527,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -2543,7 +2543,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -2559,7 +2559,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -2575,7 +2575,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -2591,7 +2591,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -2607,7 +2607,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -2623,7 +2623,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001008_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001008_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -2640,8 +2640,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001009" audioChannelFormatName="Track 9">
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001009" audioChannelFormatName="Track 9" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -2657,7 +2657,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -2673,7 +2673,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -2689,7 +2689,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -2705,7 +2705,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -2721,7 +2721,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -2737,7 +2737,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -2753,7 +2753,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -2769,7 +2769,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -2785,7 +2785,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -2801,7 +2801,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -2817,7 +2817,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -2833,7 +2833,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -2849,7 +2849,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -2865,7 +2865,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -2881,7 +2881,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -2897,7 +2897,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -2913,7 +2913,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -2929,7 +2929,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -2945,7 +2945,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001009_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001009_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -2962,8 +2962,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_0000100a" audioChannelFormatName="Track 10">
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_0000100a" audioChannelFormatName="Track 10" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -2979,7 +2979,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -2995,7 +2995,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -3011,7 +3011,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -3027,7 +3027,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -3043,7 +3043,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -3059,7 +3059,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -3075,7 +3075,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -3091,7 +3091,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -3107,7 +3107,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -3123,7 +3123,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -3139,7 +3139,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -3155,7 +3155,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -3171,7 +3171,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -3187,7 +3187,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -3203,7 +3203,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -3219,7 +3219,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -3235,7 +3235,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -3251,7 +3251,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -3267,7 +3267,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100a_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -3284,8 +3284,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_0000100b" audioChannelFormatName="Track 11">
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_0000100b" audioChannelFormatName="Track 11" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -3301,7 +3301,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -3317,7 +3317,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -3333,7 +3333,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -3349,7 +3349,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -3365,7 +3365,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -3381,7 +3381,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -3397,7 +3397,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -3413,7 +3413,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -3429,7 +3429,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -3445,7 +3445,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -3461,7 +3461,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -3477,7 +3477,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -3493,7 +3493,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -3509,7 +3509,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -3525,7 +3525,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -3541,7 +3541,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -3557,7 +3557,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -3573,7 +3573,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -3589,7 +3589,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100b_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -3606,8 +3606,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_0000100c" audioChannelFormatName="Track 12">
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_0000100c" audioChannelFormatName="Track 12" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -3623,7 +3623,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -3639,7 +3639,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -3655,7 +3655,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -3671,7 +3671,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -3687,7 +3687,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -3703,7 +3703,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -3719,7 +3719,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -3735,7 +3735,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -3751,7 +3751,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -3767,7 +3767,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -3783,7 +3783,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -3799,7 +3799,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -3815,7 +3815,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -3831,7 +3831,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -3847,7 +3847,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -3863,7 +3863,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -3879,7 +3879,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -3895,7 +3895,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -3911,7 +3911,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100c_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -3928,8 +3928,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_0000100d" audioChannelFormatName="Track 13">
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_0000100d" audioChannelFormatName="Track 13" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -3945,7 +3945,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -3961,7 +3961,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -3977,7 +3977,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -3993,7 +3993,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -4009,7 +4009,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -4025,7 +4025,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -4041,7 +4041,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -4057,7 +4057,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -4073,7 +4073,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -4089,7 +4089,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -4105,7 +4105,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -4121,7 +4121,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -4137,7 +4137,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -4153,7 +4153,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -4169,7 +4169,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -4185,7 +4185,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -4201,7 +4201,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -4217,7 +4217,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -4233,7 +4233,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100d_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -4250,8 +4250,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_0000100e" audioChannelFormatName="Track 14">
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_0000100e" audioChannelFormatName="Track 14" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -4267,7 +4267,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -4283,7 +4283,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -4299,7 +4299,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -4315,7 +4315,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -4331,7 +4331,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -4347,7 +4347,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -4363,7 +4363,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -4379,7 +4379,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -4395,7 +4395,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -4411,7 +4411,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -4427,7 +4427,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -4443,7 +4443,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -4459,7 +4459,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -4475,7 +4475,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -4491,7 +4491,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -4507,7 +4507,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -4523,7 +4523,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -4539,7 +4539,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -4555,7 +4555,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100e_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -4572,8 +4572,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_0000100f" audioChannelFormatName="Track 15">
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_0000100f" audioChannelFormatName="Track 15" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -4589,7 +4589,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -4605,7 +4605,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -4621,7 +4621,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -4637,7 +4637,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -4653,7 +4653,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -4669,7 +4669,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -4685,7 +4685,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -4701,7 +4701,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -4717,7 +4717,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -4733,7 +4733,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -4749,7 +4749,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -4765,7 +4765,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -4781,7 +4781,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -4797,7 +4797,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -4813,7 +4813,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -4829,7 +4829,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -4845,7 +4845,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -4861,7 +4861,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -4877,7 +4877,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_0000100f_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -4894,8 +4894,8 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00001010" audioChannelFormatName="Track 16">
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000001" rtime="00:00:00.00000" duration="00:00:00.02500">
+				<audioChannelFormat audioChannelFormatID="AC_00001010" audioChannelFormatName="Track 16" typeLabel="0000">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000001" duration="00:00:00.02500" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -4911,7 +4911,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000002" rtime="00:00:00.02500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000002" duration="00:00:00.02500" rtime="00:00:00.02500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">3.750000</position>
@@ -4927,7 +4927,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000003" rtime="00:00:00.05000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000003" duration="00:00:00.02500" rtime="00:00:00.05000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">340.000000</position>
 						<position coordinate="elevation">7.500000</position>
@@ -4943,7 +4943,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000004" rtime="00:00:00.07500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000004" duration="00:00:00.02500" rtime="00:00:00.07500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">11.250000</position>
@@ -4959,7 +4959,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000005" rtime="00:00:00.10000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000005" duration="00:00:00.02500" rtime="00:00:00.10000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">20.000000</position>
 						<position coordinate="elevation">15.000000</position>
@@ -4975,7 +4975,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000006" rtime="00:00:00.12500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000006" duration="00:00:00.02500" rtime="00:00:00.12500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">40.000000</position>
 						<position coordinate="elevation">18.750000</position>
@@ -4991,7 +4991,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000007" rtime="00:00:00.15000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000007" duration="00:00:00.02500" rtime="00:00:00.15000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">60.000000</position>
 						<position coordinate="elevation">22.500000</position>
@@ -5007,7 +5007,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000008" rtime="00:00:00.17500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000008" duration="00:00:00.02500" rtime="00:00:00.17500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">80.000000</position>
 						<position coordinate="elevation">26.250000</position>
@@ -5023,7 +5023,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000009" rtime="00:00:00.20000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000009" duration="00:00:00.02500" rtime="00:00:00.20000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">100.000000</position>
 						<position coordinate="elevation">30.000000</position>
@@ -5039,7 +5039,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000a" rtime="00:00:00.22500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000a" duration="00:00:00.02500" rtime="00:00:00.22500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">120.000000</position>
 						<position coordinate="elevation">33.750000</position>
@@ -5055,7 +5055,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000b" rtime="00:00:00.25000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000b" duration="00:00:00.02500" rtime="00:00:00.25000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">140.000000</position>
 						<position coordinate="elevation">37.500000</position>
@@ -5071,7 +5071,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000c" rtime="00:00:00.27500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000c" duration="00:00:00.02500" rtime="00:00:00.27500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">160.000000</position>
 						<position coordinate="elevation">41.250000</position>
@@ -5087,7 +5087,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000d" rtime="00:00:00.30000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000d" duration="00:00:00.02500" rtime="00:00:00.30000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">180.000000</position>
 						<position coordinate="elevation">45.000000</position>
@@ -5103,7 +5103,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000e" rtime="00:00:00.32500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000e" duration="00:00:00.02500" rtime="00:00:00.32500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">200.000000</position>
 						<position coordinate="elevation">48.750000</position>
@@ -5119,7 +5119,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000f" rtime="00:00:00.35000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_0000000f" duration="00:00:00.02500" rtime="00:00:00.35000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">220.000000</position>
 						<position coordinate="elevation">52.500000</position>
@@ -5135,7 +5135,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000010" rtime="00:00:00.37500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000010" duration="00:00:00.02500" rtime="00:00:00.37500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">240.000000</position>
 						<position coordinate="elevation">56.250000</position>
@@ -5151,7 +5151,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000011" rtime="00:00:00.40000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000011" duration="00:00:00.02500" rtime="00:00:00.40000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">260.000000</position>
 						<position coordinate="elevation">60.000000</position>
@@ -5167,7 +5167,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000012" rtime="00:00:00.42500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000012" duration="00:00:00.02500" rtime="00:00:00.42500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">280.000000</position>
 						<position coordinate="elevation">63.750000</position>
@@ -5183,7 +5183,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000013" rtime="00:00:00.45000" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000013" duration="00:00:00.02500" rtime="00:00:00.45000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">300.000000</position>
 						<position coordinate="elevation">67.500000</position>
@@ -5199,7 +5199,7 @@
 						<other1>1</other1>
 						<other2>2</other2>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00001010_00000014" rtime="00:00:00.47500" duration="00:00:00.02500">
+					<audioBlockFormat audioBlockFormatID="AB_00001010_00000014" duration="00:00:00.02500" rtime="00:00:00.47500">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">320.000000</position>
 						<position coordinate="elevation">71.250000</position>
@@ -5216,195 +5216,195 @@
 						<other2>2</other2>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001001" audioStreamFormatName="PCM_Track 1" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001001" audioStreamFormatName="PCM_Track 1" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001001</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001001_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001002" audioStreamFormatName="PCM_Track 2" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001002" audioStreamFormatName="PCM_Track 2" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001002</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001002_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001003" audioStreamFormatName="PCM_Track 3" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001003" audioStreamFormatName="PCM_Track 3" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001003</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001003_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001004" audioStreamFormatName="PCM_Track 4" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001004" audioStreamFormatName="PCM_Track 4" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001004</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001004_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001005" audioStreamFormatName="PCM_Track 5" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001005" audioStreamFormatName="PCM_Track 5" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001005</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001005_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001006" audioStreamFormatName="PCM_Track 6" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001006" audioStreamFormatName="PCM_Track 6" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001006</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001006_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001007" audioStreamFormatName="PCM_Track 7" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001007" audioStreamFormatName="PCM_Track 7" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001007</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001007_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001008" audioStreamFormatName="PCM_Track 8" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001008" audioStreamFormatName="PCM_Track 8" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001008</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001008_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001009" audioStreamFormatName="PCM_Track 9" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001009" audioStreamFormatName="PCM_Track 9" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001009</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001009_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_0000100a" audioStreamFormatName="PCM_Track 10" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_0000100a" audioStreamFormatName="PCM_Track 10" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_0000100a</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_0000100a_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_0000100b" audioStreamFormatName="PCM_Track 11" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_0000100b" audioStreamFormatName="PCM_Track 11" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_0000100b</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_0000100b_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_0000100c" audioStreamFormatName="PCM_Track 12" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_0000100c" audioStreamFormatName="PCM_Track 12" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_0000100c</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_0000100c_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_0000100d" audioStreamFormatName="PCM_Track 13" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_0000100d" audioStreamFormatName="PCM_Track 13" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_0000100d</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_0000100d_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_0000100e" audioStreamFormatName="PCM_Track 14" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_0000100e" audioStreamFormatName="PCM_Track 14" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_0000100e</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_0000100e_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_0000100f" audioStreamFormatName="PCM_Track 15" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_0000100f" audioStreamFormatName="PCM_Track 15" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_0000100f</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_0000100f_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioStreamFormat audioStreamFormatID="AS_00001010" audioStreamFormatName="PCM_Track 16" formatLabel="0001" formatDefinition="PCM">
+				<audioStreamFormat audioStreamFormatID="AS_00001010" audioStreamFormatName="PCM_Track 16" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioChannelFormatIDRef>AC_00001010</audioChannelFormatIDRef>
 					<audioTrackFormatIDRef>AT_00001010_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioStreamFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001001_01" audioTrackFormatName="PCM_Track 1" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001001_01" audioTrackFormatName="PCM_Track 1" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001001</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001002_01" audioTrackFormatName="PCM_Track 2" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001002_01" audioTrackFormatName="PCM_Track 2" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001002</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001003_01" audioTrackFormatName="PCM_Track 3" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001003_01" audioTrackFormatName="PCM_Track 3" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001003</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001004_01" audioTrackFormatName="PCM_Track 4" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001004_01" audioTrackFormatName="PCM_Track 4" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001004</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001005_01" audioTrackFormatName="PCM_Track 5" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001005_01" audioTrackFormatName="PCM_Track 5" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001005</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001006_01" audioTrackFormatName="PCM_Track 6" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001006_01" audioTrackFormatName="PCM_Track 6" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001006</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001007_01" audioTrackFormatName="PCM_Track 7" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001007_01" audioTrackFormatName="PCM_Track 7" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001007</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001008_01" audioTrackFormatName="PCM_Track 8" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001008_01" audioTrackFormatName="PCM_Track 8" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001008</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001009_01" audioTrackFormatName="PCM_Track 9" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001009_01" audioTrackFormatName="PCM_Track 9" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001009</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_0000100a_01" audioTrackFormatName="PCM_Track 10" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_0000100a_01" audioTrackFormatName="PCM_Track 10" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_0000100a</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_0000100b_01" audioTrackFormatName="PCM_Track 11" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_0000100b_01" audioTrackFormatName="PCM_Track 11" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_0000100b</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_0000100c_01" audioTrackFormatName="PCM_Track 12" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_0000100c_01" audioTrackFormatName="PCM_Track 12" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_0000100c</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_0000100d_01" audioTrackFormatName="PCM_Track 13" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_0000100d_01" audioTrackFormatName="PCM_Track 13" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_0000100d</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_0000100e_01" audioTrackFormatName="PCM_Track 14" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_0000100e_01" audioTrackFormatName="PCM_Track 14" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_0000100e</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_0000100f_01" audioTrackFormatName="PCM_Track 15" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_0000100f_01" audioTrackFormatName="PCM_Track 15" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_0000100f</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackFormat audioTrackFormatID="AT_00001010_01" audioTrackFormatName="PCM_Track 16" formatLabel="0001" formatDefinition="PCM">
+				<audioTrackFormat audioTrackFormatID="AT_00001010_01" audioTrackFormatName="PCM_Track 16" formatDefinition="PCM" formatLabel="0001" typeLabel="0000">
 					<audioStreamFormatIDRef>AS_00001010</audioStreamFormatIDRef>
 				</audioTrackFormat>
-				<audioTrackUID UID="ATU_00000001" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000001" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001001_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000002" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000002" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001002_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000003" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000003" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001003_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000004" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000004" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001004_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001001</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000005" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000005" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001005_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000006" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000006" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001006_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000007" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000007" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001007_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000008" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000008" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001008_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001002</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000009" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000009" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001009_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_0000000a" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_0000000a" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_0000100a_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_0000000b" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_0000000b" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_0000100b_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_0000000c" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_0000000c" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_0000100c_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001003</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_0000000d" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_0000000d" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_0000100d_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_0000000e" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_0000000e" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_0000100e_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_0000000f" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_0000000f" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_0000100f_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioTrackUID>
-				<audioTrackUID UID="ATU_00000010" sampleRate="48000" bitDepth="24">
+				<audioTrackUID UID="ATU_00000010" bitDepth="24" sampleRate="48000" typeLabel="0000">
 					<audioTrackFormatIDRef>AT_00001010_01</audioTrackFormatIDRef>
 					<audioPackFormatIDRef>AP_00001004</audioPackFormatIDRef>
 				</audioTrackUID>

@@ -91,6 +91,8 @@ bool ADMRIFFFile::CreateExtraChunks()
       }
     }
 
+    // TODO: this cannot be expanded upon!
+    
     // get ADM object to create chna chunk
     if ((chna = adm->GetChna(chnalen)) != NULL)
     {

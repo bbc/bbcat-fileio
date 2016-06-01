@@ -17,13 +17,13 @@ public:
   TinyXMLADMData(const std::string& standarddefinitionsfile);
   virtual ~TinyXMLADMData();
 
-protected:
   /*--------------------------------------------------------------------------------*/
   /** Register function - this is called automatically
    */
   /*--------------------------------------------------------------------------------*/
   static bool Register();
 
+protected:
   /*--------------------------------------------------------------------------------*/
   /** Decode XML string as ADM
    *
@@ -134,9 +134,6 @@ protected:
     UNUSED_PARAMETER(context);
     return new TinyXMLADMData(standarddefinitionsfile);
   }
-
-protected:
-  static const bool __registered;
 };
 
 BBC_AUDIOTOOLBOX_END

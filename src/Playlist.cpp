@@ -43,6 +43,8 @@ Playlist::~Playlist()
 /*--------------------------------------------------------------------------------*/
 void Playlist::AddFile(SoundFileSamples *file)
 {
+  ThreadLock lock(tlock);
+
   list.push_back(file);
 
   playlistlength += file->GetSampleLength();
@@ -52,11 +54,28 @@ void Playlist::AddFile(SoundFileSamples *file)
 }
 
 /*--------------------------------------------------------------------------------*/
+/** Update playlist length (e.g. after modifying a file)
+ */
+/*--------------------------------------------------------------------------------*/
+void Playlist::UpdatePlaylistLength()
+{
+  uint_t i;
+
+  playlistlength = 0;
+  for (i = 0; i < list.size(); i++)
+  {
+    playlistlength += list[i]->GetSampleLength();
+  }
+}
+
+/*--------------------------------------------------------------------------------*/
 /** Clear playlist
  */
 /*--------------------------------------------------------------------------------*/
 void Playlist::Clear()
 {
+  ThreadLock lock(tlock);
+
   while (list.size())
   {
     delete list.back();
@@ -75,6 +94,8 @@ void Playlist::Clear()
 /*--------------------------------------------------------------------------------*/
 void Playlist::Reset()
 {
+  ThreadLock lock(tlock);
+
   filestartpos    = 0;           // reset to start of playlist
   fadedowncount   = 0;           // stop fade down
   fadeupcount     = fadesamples; // start fade up
@@ -92,6 +113,8 @@ void Playlist::Reset()
 /*--------------------------------------------------------------------------------*/
 void Playlist::Next()
 {
+  ThreadLock lock(tlock);
+
   if (it != list.end())
   {
     // if looping file, don't need to move playlist, just reset back to start of file
@@ -117,9 +140,41 @@ void Playlist::Next()
 /** Return current file or NULL if the end of the list has been reached
  */
 /*--------------------------------------------------------------------------------*/
-SoundFileSamples *Playlist::GetFile()
+SoundFileSamples *Playlist::GetFile() const
 {
+  ThreadLock lock(tlock);
   return (it != list.end()) ? *it : NULL;
+}
+
+/*--------------------------------------------------------------------------------*/
+/** Return file at specific index or NULL if index is out of range
+ */
+/*--------------------------------------------------------------------------------*/
+SoundFileSamples *Playlist::GetFileAtIndex(uint_t index) const
+{
+  ThreadLock lock(tlock);
+  return (index < list.size()) ? list[index] : NULL;
+}
+
+/*--------------------------------------------------------------------------------*/
+/** Return last file in list (or NULL)
+ */
+/*--------------------------------------------------------------------------------*/
+SoundFileSamples *Playlist::GetLastFile() const
+{
+  ThreadLock lock(tlock);
+  return list.size() ? list.back() : NULL;
+}
+
+/*--------------------------------------------------------------------------------*/
+/** Return index of specified file (or -1)
+ */
+/*--------------------------------------------------------------------------------*/
+int Playlist::GetIndexOf(SoundFileSamples *file) const
+{
+  ThreadLock lock(tlock);
+  std::vector<SoundFileSamples *>::const_iterator it = std::find(list.begin(), list.end(), file);
+  return (it != list.end()) ? it - list.begin() : -1;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -128,6 +183,7 @@ SoundFileSamples *Playlist::GetFile()
 /*--------------------------------------------------------------------------------*/
 uint_t Playlist::GetMaxOutputChannels() const
 {
+  ThreadLock lock(tlock);
   uint_t i, channels = 0;
 
   for (i = 0; i < list.size(); i++)
@@ -146,6 +202,7 @@ uint_t Playlist::GetMaxOutputChannels() const
 /*--------------------------------------------------------------------------------*/
 uint64_t Playlist::GetPlaybackPosition() const
 {
+  ThreadLock lock(tlock);
   uint64_t pos = filestartpos;
   if (it != list.end()) pos += (*it)->GetSamplePosition();
   return pos;
@@ -163,7 +220,7 @@ bool Playlist::SetPlaybackPosition(uint64_t pos, bool force)
 {
   ThreadLock lock(tlock);
   bool success = false;
-
+  
   pos = std::min(pos, playlistlength);
 
   if (!Empty())
@@ -239,7 +296,7 @@ bool Playlist::SetPlaybackPositionEx(uint64_t pos)
     (*it)->SetSamplePosition(pos - filestartpos);
     success = true;
   }
-
+  
   return success;
 }
 
@@ -249,6 +306,7 @@ bool Playlist::SetPlaybackPositionEx(uint64_t pos)
 /*--------------------------------------------------------------------------------*/
 uint_t Playlist::GetPlaybackIndex() const
 {
+  ThreadLock lock(tlock);
   return (uint_t)(it - list.begin());
 }
 
@@ -260,20 +318,25 @@ uint_t Playlist::GetPlaybackIndex() const
 /*--------------------------------------------------------------------------------*/
 uint_t Playlist::GetPlaybackCount() const
 {
+  ThreadLock lock(tlock);
   return limited::subz((uint_t)list.size(), 1U);
 }
   
 /*--------------------------------------------------------------------------------*/
 /** Move to specified playlist index
  *
+ * @param index new playback index
+ * @param fromstart true to play new item from start, false to start playing new item from the *same* place as currently being played
+ * @param force true to force position change immediately (see below)
+ *
  * @note setting force to true may cause clicks!
  * @note setting force to false causes a fade down *before* and a fade up *after*
  * changing the position which means this doesn't actually change the position straight away!
  */
 /*--------------------------------------------------------------------------------*/
-bool Playlist::SetPlaybackIndex(uint_t index, bool force)
+bool Playlist::SetPlaybackIndex(uint_t index, bool fromstart, bool force)
 {
-  // NO NEED to lock thread here
+  ThreadLock lock(tlock);
   bool success = false;
 
   if (!Empty())
@@ -289,7 +352,20 @@ bool Playlist::SetPlaybackIndex(uint_t index, bool force)
       pos += list[i]->GetSampleLength();
     }
 
-    BBCDEBUG2(("SetPlaybackIndex %u pos %s", index, StringFrom(pos).c_str()));
+    if (!fromstart)
+    {
+      // use current position within current file as offset
+      const SoundFileSamples *file = GetFile();
+      if (file)
+      {
+        uint64_t offset = file->GetSamplePosition();
+        //TODO: limit offset
+        pos += offset;
+        pos  = std::min(pos, playlistlength);
+      }
+    }
+    
+    BBCDEBUG3(("SetPlaybackIndex %u pos %s", index, StringFrom(pos).c_str()));
   
     // now just request change of position
     success = SetPlaybackPosition(pos, force);
@@ -298,6 +374,23 @@ bool Playlist::SetPlaybackIndex(uint_t index, bool force)
   }
 
   return success;
+}
+
+/*--------------------------------------------------------------------------------*/
+/** Return playback progress object
+ */
+/*--------------------------------------------------------------------------------*/
+PlaybackTracker::PLAYBACKPROGRESS Playlist::GetPlaybackProgress() const
+{
+  PLAYBACKPROGRESS progress;
+
+  memset(&progress, 0, sizeof(progress));
+  progress.file             = GetFile();
+  progress.absoluteposition = GetPlaybackPosition();
+  progress.fileposition     = progress.file ? progress.file->GetAbsoluteSamplePosition() : 0;
+  progress.fileindex        = GetPlaybackIndex();
+
+  return progress;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -333,7 +426,8 @@ uint_t Playlist::ReadSamples(Sample_t *dst, uint_t channel, uint_t channels, uin
 {
   ThreadLock lock(tlock);
   uint_t nframes = 0;
-
+  bool   error = false;
+  
   while (!AtEnd() && frames)
   {
     SoundFileSamples *file = GetFile();
@@ -416,9 +510,22 @@ uint_t Playlist::ReadSamples(Sample_t *dst, uint_t channel, uint_t channels, uin
       }
     }
     
+    // fetch current error state
+    bool newerror = file->InError();
+
     // if reached the end of the file, move onto next one
-    if (!nread) Next();
-      
+    if (!nread)
+    {
+      // if one read error occurs directly after another, assume everything's broken
+      // and break out of this loop to prevent endless attempts at reading
+      if (error && newerror) break;
+      // otherwise move onto next item in playlist
+      Next();
+    }
+
+    // keep error state
+    error    = newerror;
+    
     dst     += nread * channels;
     frames  -= nread;
     nframes += nread;

@@ -10,19 +10,14 @@
 
 using namespace bbcat;
 
-// ensure the version numbers of the linked libraries and registered
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_base_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_dsp_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_adm_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_fileio_version);
-
-// ensure the TinyXMLADMData object file is kept in the application
-BBC_AUDIOTOOLBOX_REQUIRE(TinyXMLADMData);
+BBC_AUDIOTOOLBOX_START
+extern bool bbcat_register_bbcat_fileio();
+BBC_AUDIOTOOLBOX_END
 
 int main(int argc, char *argv[])
 {
-  // print library versions (the actual loaded versions, if dynamically linked)
-  printf("Versions:\n%s\n", LoadedVersions::Get().GetVersionsList().c_str());
+  // ensure libraries are set up
+  bbcat_register_bbcat_fileio();
 
   if (argc < 3)
   {
@@ -73,9 +68,9 @@ int main(int argc, char *argv[])
             XMLValue value;
 
             value.SetValue("data", "7");
-            value.SetValueAttribute("index", "0");
-            value.SetValueAttribute("type", "numerical");
-            value.SetValueAttribute("subtype", "integer");
+            value.SetAttribute("index", "0");
+            value.SetAttribute("type", "numerical");
+            value.SetAttribute("subtype", "integer");
 
             subvalues.AddValue(value);
           }
@@ -83,9 +78,9 @@ int main(int argc, char *argv[])
             XMLValue value;
 
             value.SetValue("data", "3.4");
-            value.SetValueAttribute("index", "1");
-            value.SetValueAttribute("type", "numerical");
-            value.SetValueAttribute("subtype", "decimal");
+            value.SetAttribute("index", "1");
+            value.SetAttribute("type", "numerical");
+            value.SetAttribute("subtype", "decimal");
 
             subvalues.AddValue(value);
           }
@@ -93,8 +88,8 @@ int main(int argc, char *argv[])
             XMLValue value;
 
             value.SetValue("data", "text");
-            value.SetValueAttribute("index", "2");
-            value.SetValueAttribute("type", "text");
+            value.SetAttribute("index", "2");
+            value.SetAttribute("type", "text");
 
             subvalues.AddValue(value);
           }

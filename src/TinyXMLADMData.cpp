@@ -8,9 +8,18 @@
 
 BBC_AUDIOTOOLBOX_START
 
-BBC_AUDIOTOOLBOX_KEEP(TinyXMLADMData);
-
-const bool TinyXMLADMData::__registered = TinyXMLADMData::Register();
+/*--------------------------------------------------------------------------------*/
+/** Registering function which performs arbitrary registration
+ *
+ * @note any bbcat_register_() functions will automatically be added to register.cpp
+ */
+/*--------------------------------------------------------------------------------*/
+void bbcat_register_TinyXMLADMData()
+{
+  // used of variable prevents Register() being called multiple times
+  static const bool registered = TinyXMLADMData::Register();
+  UNUSED_PARAMETER(registered);
+}
 
 TinyXMLADMData::TinyXMLADMData(const std::string& standarddefinitionsfile) : XMLADMData()
 {
@@ -149,7 +158,7 @@ void TinyXMLADMData::ParseValue(ADMObject *obj, void *userdata)
 /*--------------------------------------------------------------------------------*/
 /** Parse value (and its attributes) into a list of XML values
  *
- * @param name name of object (for BBCDEBUGGING only)
+ * @param name name of object (for DEBUGGING only)
  * @param values list of XML values to be added to
  * @param userdata implementation specific object data
  */
@@ -163,21 +172,20 @@ void TinyXMLADMData::ParseValue(const std::string& name, XMLValues& values, void
 
   UNUSED_PARAMETER(name);
 
-  value.attr = false;
   value.name = node->Value();
   if (subnode && (subnode->Type() != TiXmlNode::TINYXML_ELEMENT)) value.value = subnode->Value();
 
   BBCDEBUG3(("%s: %s='%s', attrs:",
-          name.c_str(),
-          value.name.c_str(), value.value.c_str()));
+             name.c_str(),
+             value.name.c_str(), value.value.c_str()));
     
   for (attr = node->ToElement()->FirstAttribute(); attr; attr = attr->Next())
   {
-    value.attrs[attr->Name()] = attr->Value();
+    value.SetAttribute(attr->Name(), attr->Value());
 
     BBCDEBUG3(("\t%s='%s'", attr->Name(), attr->Value()));
   }
-
+  
   XMLValues subvalues;
   for (; subnode; subnode = subnode->NextSibling())
   {
@@ -207,7 +215,7 @@ void TinyXMLADMData::ParseAttributes(ADMObject *obj, void *userdata)
 /*--------------------------------------------------------------------------------*/
 /** Parse attributes into a list of XML values
  *
- * @param name name of object (for BBCDEBUGGING only)
+ * @param name name of object (for DEBUGGING only)
  * @param type object type - necessary to prevent object name and ID being added
  * @param values list of XML values to be populated
  * @param userdata implementation specific object data
@@ -219,6 +227,9 @@ void TinyXMLADMData::ParseAttributes(const std::string& name, const std::string&
   const TiXmlAttribute *attr; 
 
   UNUSED_PARAMETER(name);
+
+  // reserve first entry for attributes only
+  if (!values.size()) values.AddValue(XMLValue());
   
   for (attr = node->ToElement()->FirstAttribute(); attr; attr = attr->Next())
   {
@@ -229,17 +240,11 @@ void TinyXMLADMData::ParseAttributes(const std::string& name, const std::string&
         (attr_name != (type + "ID")) &&
         (attr_name != "UID"))
     {
-      XMLValue value;
-            
-      value.attr  = true;
-      value.name  = attr_name;
-      value.value = attr->Value();
-
-      values.AddValue(value);
+      values[0].SetAttribute(attr_name, attr->Value());
 
       BBCDEBUG3(("%s: %s='%s'",
-              name.c_str(),
-              attr_name.c_str(), attr->Value()));
+                 name.c_str(),
+                 attr_name.c_str(), attr->Value()));
     }
   }
 }
@@ -247,7 +252,7 @@ void TinyXMLADMData::ParseAttributes(const std::string& name, const std::string&
 /*--------------------------------------------------------------------------------*/
 /** Parse audioBlockFormat XML object
  *
- * @param name parent name (for BBCDEBUGGING only)
+ * @param name parent name (for DEBUGGING only)
  * @param obj audioBlockFormat object
  * @param userdata user suppled data
  */
@@ -257,7 +262,7 @@ void TinyXMLADMData::ParseValues(const std::string& name, ADMAudioBlockFormat *o
   const TiXmlNode *node = (const TiXmlNode *)userdata;
   const TiXmlNode *subnode;
   XMLValues       values;
-            
+  
   // parse attributes
   ParseAttributes(name, obj->GetType(), values, userdata);
 

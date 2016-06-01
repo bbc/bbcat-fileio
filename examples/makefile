@@ -1,5 +1,4 @@
 
-
 BBCAT_BASE_CFLAGS=$(shell pkg-config --cflags bbcat-base-0.1 | sed -E 's/\\\"/\"/g')
 BBCAT_BASE_LDFLAGS=$(shell pkg-config --libs bbcat-base-0.1)
 BBCAT_DSP_CFLAGS=$(shell pkg-config --cflags bbcat-dsp-0.1 | sed -E 's/\\\"/\"/g')
@@ -9,13 +8,13 @@ BBCAT_ADM_LDFLAGS=$(shell pkg-config --libs bbcat-adm-0.1)
 BBCAT_FILEIO_CFLAGS=$(shell pkg-config --cflags bbcat-fileio-0.1 | sed -E 's/\\\"/\"/g')
 BBCAT_FILEIO_LDFLAGS=$(shell pkg-config --libs bbcat-fileio-0.1)
 
-CFLAGS=-Wall -Werror -Wextra -msse2 -O0 -g
+CFLAGS=-Wall -Werror -Wextra -msse2 -O0 -g -std=c++11
 LDFLAGS=
 
 CXX = g++
 LD = g++
 
-APPLICATIONS=read-adm-bwf write-adm-bwf create-adm map-adm-bwf load-xml write-separate-adm udp-demo play-metadata modify-adm-bwf write-4gb-file
+APPLICATIONS=read-adm-bwf write-adm-bwf create-adm map-adm-bwf load-xml write-separate-adm adm-to-json play-metadata read_chunks wav2bwav modify-adm-bwf write-4gb-file gentestfile
 
 all: $(APPLICATIONS)
 

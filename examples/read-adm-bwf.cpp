@@ -4,25 +4,21 @@
 
 #include <bbcat-base/LoadedVersions.h>
 
+#include <bbcat-adm/ADMXMLGenerator.h>
 #include <bbcat-fileio/ADMRIFFFile.h>
 #include <bbcat-fileio/ADMAudioFileSamples.h>
 
 using namespace bbcat;
 
-// ensure the version numbers of the linked libraries and registered
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_base_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_dsp_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_adm_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_fileio_version);
-
-// ensure the TinyXMLADMData object file is kept in the application
-BBC_AUDIOTOOLBOX_REQUIRE(TinyXMLADMData);
+BBC_AUDIOTOOLBOX_START
+extern bool bbcat_register_bbcat_fileio();
+BBC_AUDIOTOOLBOX_END
 
 int main(int argc, char *argv[])
 {
-  // print library versions (the actual loaded versions, if dynamically linked)
-  printf("Versions:\n%s\n", LoadedVersions::Get().GetVersionsList().c_str());
-
+  // ensure libraries are set up
+  bbcat_register_bbcat_fileio();
+  
   if (argc < 2)
   {
     fprintf(stderr, "Usage: read-adm-bwf <bwf-file>\n");
@@ -91,10 +87,13 @@ int main(int argc, char *argv[])
         if ((obj = dynamic_cast<const ADMAudioObject *>(list.back())) != NULL)
         {
           // create audio samples handler for the audio object
-          ADMAudioFileSamples   handler(file.GetSamples(), obj);
+          ADMAudioFileSamples   handler(file);
           std::vector<Sample_t> samples;
           uint_t n, nsamples = 1024;
 
+          // add audio object to handler
+          handler.Add(obj);
+          
           printf("Reading audio from %s (%u channels)\n", obj->ToString().c_str(), handler.GetChannels());
 
           // make buffer for 1024 frames worth of samples
@@ -122,6 +121,18 @@ int main(int argc, char *argv[])
        *
        */
     }
+
+    // dump ADM out in text form
+    {
+      std::string str;
+      
+      adm->Dump(str);
+
+      printf("\nADM:\n%s", str.c_str());
+    }
+
+    // dump ADM out in XML form
+    printf("\nXML:\n%s", ADMXMLGenerator::GetAxml(adm).c_str());
   }
   else fprintf(stderr, "Failed to open file '%s' for reading!\n", argv[1]);
 

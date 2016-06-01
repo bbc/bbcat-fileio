@@ -26,9 +26,9 @@ public:
   /*--------------------------------------------------------------------------------*/
   /** Read ADM data from the chna and axml RIFF chunks
    *
-   * @param chna ptr to chna chunk data 
+   * @param chna ptr to chna chunk data
    * @param chnalength length of chna data
-   * @param axml ptr to axml chunk data (MUST be terminated like a string) 
+   * @param axml ptr to axml chunk data (MUST be terminated like a string)
    *
    * @return true if data read successfully
    *
@@ -40,7 +40,7 @@ public:
   /*--------------------------------------------------------------------------------*/
   /** Read ADM data from the chna RIFF chunk
    *
-   * @param data ptr to chna chunk data 
+   * @param data ptr to chna chunk data
    * @param len length of chna chunk
    *
    * @return true if data read successfully
@@ -52,41 +52,45 @@ public:
   /** Read ADM data from the axml RIFF chunk
    *
    * @param data ptr to axml chunk data (MUST be terminated!)
+   * @param finalise true to attempt to finalise ADM after loading
    *
    * @return true if data read successfully
    */
   /*--------------------------------------------------------------------------------*/
-  bool SetAxml(const char *data);
+  bool SetAxml(const char *data, bool finalise = true);
 
   /*--------------------------------------------------------------------------------*/
   /** Read ADM data from explicit XML
    *
    * @param data XML data stored as a string
+   * @param finalise true to attempt to finalise ADM after loading
    *
    * @return true if data read successfully
    */
   /*--------------------------------------------------------------------------------*/
-  bool SetAxml(const std::string& data);
+  bool SetAxml(const std::string& data, bool finalise = true);
 
   /*--------------------------------------------------------------------------------*/
   /** Load CHNA data from file
    *
    * @param filename file containing chna in text form
+   * @param finalise true to attempt to finalise ADM after loading
    *
    * @return true if data read successfully
    */
   /*--------------------------------------------------------------------------------*/
-  bool ReadChnaFromFile(const std::string& filename);
+  bool ReadChnaFromFile(const std::string& filename, bool finalise = true);
 
   /*--------------------------------------------------------------------------------*/
   /** Load ADM data from file
    *
    * @param filename file containing XML
+   * @param finalise true to attempt to finalise ADM after loading
    *
    * @return true if data read successfully
    */
   /*--------------------------------------------------------------------------------*/
-  bool ReadXMLFromFile(const std::string& filename);
+  bool ReadXMLFromFile(const std::string& filename, bool finalise = true);
 
   /*--------------------------------------------------------------------------------*/
   /** Create chna chunk data
@@ -144,7 +148,7 @@ public:
 
   static const std::string DefaultStandardDefinitionsFile;
   static XMLADMData *CreateADM(const std::string& standarddefinitionsfile = "");
-  
+
 protected:
   /*--------------------------------------------------------------------------------*/
   /** Load standard definitions file into ADM

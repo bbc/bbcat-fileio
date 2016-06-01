@@ -4,7 +4,6 @@
 #include <string>
 #include <map>
 
-#include <bbcat-base/SelfRegisteringParametricObject.h>
 #include <bbcat-adm/AudioObjectCursor.h>
 
 #include "RIFFFile.h"
@@ -103,6 +102,12 @@ public:
   virtual void PrepareCursors();
 
   ADMData *GetADM() const {return adm;}
+
+  /*--------------------------------------------------------------------------------*/
+  /** Return array of track cursors that are used during writing (ONLY)
+   */
+  /*--------------------------------------------------------------------------------*/
+  std::vector<ADMTrackCursor *>& GetWriteCursors() {return cursors;}
 
 protected:
   /*--------------------------------------------------------------------------------*/

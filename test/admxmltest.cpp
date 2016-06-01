@@ -1,13 +1,11 @@
 
-#define BOOST_TEST_MODULE admxmltest
-#define BOOST_TEST_DYN_LINK
-#include <boost/test/unit_test.hpp>
+#include <catch/catch.hpp>
 
-#include "../src/ADMRIFFFile.h"
+#include "ADMRIFFFile.h"
 
 USE_BBC_AUDIOTOOLBOX
 
-BOOST_AUTO_TEST_CASE( comparison )
+TEST_CASE("comparison")
 {
   const std::string testfiles[] =
   {
@@ -16,22 +14,41 @@ BOOST_AUTO_TEST_CASE( comparison )
   };
   uint_t i;
 
+#ifdef CMAKE_BUILD
+      std::string build = "cmake";
+#else
+      std::string build = "autotools";
+#endif
+      
+#ifdef TARGET_OS_WINDOWS
+      std::string platform = "win64";
+#endif
+#ifdef TARGET_OS_UNIXBSD
+#ifdef __LINUX__
+      std::string platform = "linux";
+#else
+      std::string platform = "mac";
+#endif      
+#endif
+
   for (i = 0; i < NUMBEROF(testfiles); i++)
   {
     XMLADMData *adm1 = XMLADMData::CreateADM();
     XMLADMData *adm2 = XMLADMData::CreateADM();
     const std::string& testfile = testfiles[i];
     
-    BOOST_CHECK(adm1);
-    BOOST_CHECK(adm2);
+    CHECK(adm1 != NULL);
+    CHECK(adm2 != NULL);
 
     if (adm1)
     {
       EnhancedFile f;
-    
-      BOOST_CHECK(adm1->ReadXMLFromFile(testfile));
+      
+      REQUIRE(adm1->ReadXMLFromFile(testfile) == true);
 
-      BOOST_CHECK(f.fopen("res.xml", "w"));
+      // create build / target specific output filename
+      std::string output = "res-" + build + "-" + platform + "-" + testfiles[i];
+      REQUIRE(f.fopen(output.c_str(), "wb") == true);
       if (f.isopen())
       {
         f.fprintf("%s", adm1->GetAxml().c_str());
@@ -39,15 +56,15 @@ BOOST_AUTO_TEST_CASE( comparison )
 
         if (adm2)
         {
-          BOOST_CHECK(adm2->ReadXMLFromFile("res.xml"));
+          CHECK(adm2->ReadXMLFromFile(output.c_str()) == true);
 
           // check that axml's are identical
-          BOOST_CHECK(adm1->GetAxml() == adm2->GetAxml());
+          CHECK(adm1->GetAxml() == adm2->GetAxml());
 
           // also check that files are identical
           std::string cmd;
-          Printf(cmd, "diff %s res.xml", testfile.c_str());
-          BOOST_CHECK(system(cmd.c_str()) == 0);
+          Printf(cmd, "diff %s %s", testfile.c_str(), output.c_str());
+          CHECK(system(cmd.c_str()) == 0);
         }
       }
     }

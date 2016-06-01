@@ -28,7 +28,8 @@ SoundFileSamples::SoundFileSamples() :
   totalbytes(0),
   samplebuffer(NULL),
   samplebufferframes(256),
-  readonly(true)
+  readonly(true),
+  inerror(false)
 {
   memset(&clip, 0, sizeof(clip));
 }
@@ -41,7 +42,8 @@ SoundFileSamples::SoundFileSamples(const SoundFileSamples *obj) :
   totalbytes(0),
   samplebuffer(NULL),
   samplebufferframes(256),
-  readonly(true)
+  readonly(true),
+  inerror(false)
 {
   memset(&clip, 0, sizeof(clip));
 
@@ -149,6 +151,7 @@ uint_t SoundFileSamples::ReadSamples(uint8_t *buffer, SampleFormat_t type, uint_
           else if (res <= 0)
           {
             BBCERROR("Failed to read %u frames (%u bytes) from file, error %s", nframes, nframes * format->GetBytesPerFrame(), strerror(file->ferror()));
+            inerror = true;
             break;
           }
           else
@@ -160,6 +163,7 @@ uint_t SoundFileSamples::ReadSamples(uint8_t *buffer, SampleFormat_t type, uint_
         else
         {
           BBCERROR("Failed to seek to correct position in file, error %s", strerror(file->ferror()));
+          inerror = true;
           n = 0;
           break;
         }
@@ -236,6 +240,7 @@ uint_t SoundFileSamples::WriteSamples(const uint8_t *buffer, SampleFormat_t type
         else if (res <= 0)
         {
           BBCERROR("Failed to write %u frames (%u bytes) to file, error %s", nframes, nframes * bpf, strerror(file->ferror()));
+          inerror = true;
           break;
         }
         else

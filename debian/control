@@ -2,7 +2,7 @@ Source: bbcat-fileio
 Priority: optional
 Maintainer: Richard Day <richard.day@bbc.co.uk>
 Standards-Version: 3.9.3
-Build-Depends: debhelper (>= 9), pkg-config, libbbcat-base-dev (>= 0.1.2.1), libbbcat-dsp-dev (>= 0.1.2.1), libbbcat-control-dev (>= 0.1.2.1), libbbcat-render-dev (>= 0.1.2.1), libbbcat-audioobjects-dev (>= 0.1.2.1), libtinyxml-dev (>= 2.6.2), json-spirit-dev (>= 4.0.6), libboost-test-dev (>= 1.49.0)
+Build-Depends: debhelper (>= 9), pkg-config, libbbcat-base-dev (>= 0.1.2.0), libbbcat-dsp-dev (>= 0.1.2.0), libbbcat-adm-dev (>= 0.1.2.0), libbbcat-control-dev (>= 0.1.2.0), libbbcat-render-dev (>= 0.1.2.0), libtinyxml-dev (>= 2.6.2), json-spirit-dev (>= 4.0.6), libboost-test-dev (>= 1.49.0)
 
 Package: libbbcat-fileio
 Section: libs

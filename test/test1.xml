@@ -3,21 +3,21 @@
 	<coreMetadata>
 		<format>
 			<audioFormatExtended>
-				<audioProgramme audioProgrammeID="APR_1001" audioProgrammeName="Applause">
+				<audioProgramme audioProgrammeID="APR_1001" audioProgrammeName="Applause" typeLabel="0000">
 					<audioContentIDRef>ACO_1001</audioContentIDRef>
 				</audioProgramme>
-				<audioContent audioContentID="ACO_1001" audioContentName="Applause">
+				<audioContent audioContentID="ACO_1001" audioContentName="Applause" typeLabel="0000">
 					<audioObjectIDRef>AO_1001</audioObjectIDRef>
 				</audioContent>
-				<audioObject audioObjectID="AO_1001" audioObjectName="Applause">
+				<audioObject audioObjectID="AO_1001" audioObjectName="Applause" typeLabel="0000">
 					<audioPackFormatIDRef>AP_00031001</audioPackFormatIDRef>
 					<audioTrackUIDRef>ATU_00000001</audioTrackUIDRef>
 				</audioObject>
-				<audioPackFormat audioPackFormatID="AP_00031001" audioPackFormatName="Applause" typeLabel="0003" typeDefinition="Objects">
+				<audioPackFormat audioPackFormatID="AP_00031001" audioPackFormatName="Applause" typeDefinition="Objects" typeLabel="0003">
 					<audioChannelFormatIDRef>AC_00031001</audioChannelFormatIDRef>
 				</audioPackFormat>
-				<audioChannelFormat audioChannelFormatID="AC_00031001" audioChannelFormatName="Applause1" typeLabel="0003" typeDefinition="Objects">
-					<audioBlockFormat audioBlockFormatID="AB_00031001_00000001" rtime="00:00:00.00000" duration="00:00:01.00000">
+				<audioChannelFormat audioChannelFormatID="AC_00031001" audioChannelFormatName="Applause1" typeDefinition="Objects" typeLabel="0003">
+					<audioBlockFormat audioBlockFormatID="AB_00031001_00000001" duration="00:00:01.00000" rtime="00:00:00.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">0.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -29,7 +29,7 @@
 							<zone maxX="1.000000" maxY="1.000000" maxZ="1.000000" minX="-1.000000" minY="-1.000000" minZ="-1.000000">Left wall</zone>
 						</zoneExclusion>
 					</audioBlockFormat>
-					<audioBlockFormat audioBlockFormatID="AB_00031001_00000002" rtime="00:00:01.00000" duration="00:00:01.00000">
+					<audioBlockFormat audioBlockFormatID="AB_00031001_00000002" duration="00:00:01.00000" rtime="00:00:01.00000">
 						<cartesian>0</cartesian>
 						<position coordinate="azimuth">90.000000</position>
 						<position coordinate="elevation">0.000000</position>
@@ -43,7 +43,7 @@
 						</zoneExclusion>
 					</audioBlockFormat>
 				</audioChannelFormat>
-				<audioTrackUID UID="ATU_00000001" sampleRate="48000" bitDepth="24" />
+				<audioTrackUID UID="ATU_00000001" bitDepth="24" sampleRate="48000" typeLabel="0000" />
 			</audioFormatExtended>
 		</format>
 	</coreMetadata>

@@ -11,29 +11,25 @@ libbbcat_fileio_@BBCAT_FILEIO_MAJORMINOR@_la_LIBADD =	\
 	$(BBCAT_BASE_LIBS)									\
 	$(BBCAT_DSP_LIBS)									\
 	$(BBCAT_ADM_LIBS)									\
-	$(BBCAT_GLOBAL_FILEIO_LIBS)							\
-	$(TINYXML_LIBS)
+	$(BBCAT_GLOBAL_FILEIO_LIBS)
 
 libbbcat_fileio_@BBCAT_FILEIO_MAJORMINOR@_la_CPPFLAGS =	\
 	$(BBCAT_BASE_CFLAGS)								\
 	$(BBCAT_DSP_CFLAGS)									\
 	$(BBCAT_ADM_CFLAGS)									\
 	$(BBCAT_FILEIO_CFLAGS)								\
-	$(BBCAT_GLOBAL_FILEIO_CFLAGS)						\
-	$(TINYXML_CFLAGS)
+	$(BBCAT_GLOBAL_FILEIO_CFLAGS)
 
-libbbcat_fileio_@BBCAT_FILEIO_MAJORMINOR@_la_SOURCES =	\
-	ADMAudioFileSamples.cpp								\
-	ADMRIFFFile.cpp										\
-	Playlist.cpp										\
-	RIFFChunk.cpp										\
-	RIFFChunks.cpp										\
-	RIFFFile.cpp										\
-	SoundFileAttributes.cpp								\
-	SoundObjectFile.cpp									\
-	TinyXMLADMData.cpp									\
-	XMLADMData.cpp										\
-	version.cpp
+libbbcat_fileio_sources =						\
+	ADMAudioFileSamples.cpp						\
+	ADMRIFFFile.cpp								\
+	Playlist.cpp								\
+	RIFFChunk.cpp								\
+	RIFFChunks.cpp								\
+	RIFFFile.cpp								\
+	SoundFileAttributes.cpp						\
+	TinyXMLADMData.cpp							\
+	XMLADMData.cpp
 
 pkginclude_HEADERS =							\
 	ADMAudioFileSamples.h						\
@@ -44,21 +40,15 @@ pkginclude_HEADERS =							\
 	RIFFChunks.h								\
 	RIFFFile.h									\
 	SoundFileAttributes.h						\
-	SoundObjectFile.h							\
 	TinyXMLADMData.h							\
-	XMLADMData.h								\
-	version.h
+	XMLADMData.h
 
-CLEANFILES = version.h version.cpp
+#CLEANFILES = register.cpp
 
 noinst_HEADERS =
 
-version.h: Makefile ../config.h ../gitbranch.txt
-	echo "{\"@PACKAGE@\", \"@VERSION@-`cat ../gitbranch.txt`\"}," >version.h
+# register.cpp is included in repo but will be updated by the script below 
+register.cpp: Makefile ../config.h ../gitbranch.txt $(libbbcat_fileio_sources)
+	sh $(prefix)/share/bbcat-common/findregisterfunctions.sh "bbcat-fileio" "@VERSION@-`cat ../gitbranch.txt`" "$(libbbcat_fileio_sources)" "bbcat_adm" >$@
 
-version.cpp: Makefile ../config.h ../gitbranch.txt
-	echo "/* Auto-generated: DO NOT EDIT! */" >version.cpp
-	echo "#include <bbcat-base/LoadedVersions.h>" >>version.cpp
-	echo "BBC_AUDIOTOOLBOX_START" >>version.cpp
-	echo "volatile uint_t __keep_@PACKAGE@_version = bbcat::LoadedVersions::Get().Register(\"@PACKAGE@\", \"@VERSION@-`cat ../gitbranch.txt`\");" >>version.cpp
-	echo "BBC_AUDIOTOOLBOX_END" >>version.cpp
+libbbcat_fileio_@BBCAT_FILEIO_MAJORMINOR@_la_SOURCES = $(libbbcat_fileio_sources) register.cpp

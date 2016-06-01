@@ -63,6 +63,12 @@ public:
   const SoundFormat *GetFormat() const {return format;}
   virtual void SetFile(const RefCount<EnhancedFile>& file, uint64_t pos, uint64_t bytes, bool readonly = true);
 
+  /*--------------------------------------------------------------------------------*/
+  /** Return whether read or write error has occurred
+   */
+  /*--------------------------------------------------------------------------------*/
+  bool     InError() const               {return inerror;}
+  
   uint_t   GetStartChannel()             const {return clip.channel;}
   uint_t   GetChannels()                 const {return clip.nchannels;}
 
@@ -71,8 +77,8 @@ public:
   uint64_t GetAbsoluteSamplePosition()   const {return clip.start + samplepos;}
   uint64_t GetAbsoluteSampleLength()     const {return clip.start + clip.nsamples;}
 
-  void     SetSamplePosition(uint64_t pos)         {samplepos = std::min(pos, clip.nsamples); UpdatePosition();}
-  void     SetAbsoluteSamplePosition(uint64_t pos) {samplepos = limited::limit(pos, clip.start, clip.start + clip.nsamples) - clip.start; UpdatePosition();}
+  void     SetSamplePosition(uint64_t pos)         {samplepos = std::min(pos, clip.nsamples); inerror = false; UpdatePosition();}
+  void     SetAbsoluteSamplePosition(uint64_t pos) {samplepos = limited::limit(pos, clip.start, clip.start + clip.nsamples) - clip.start; inerror = false; UpdatePosition();}
 
   uint64_t GetPositionNS()              const {return timebase.Calc(GetSamplePosition());}
   double   GetPositionSeconds()         const {return timebase.CalcSeconds(GetSamplePosition());}
@@ -126,6 +132,7 @@ protected:
   uint8_t                *samplebuffer;
   uint_t                 samplebufferframes;
   bool                   readonly;
+  bool                   inerror;
 };
 
 BBC_AUDIOTOOLBOX_END

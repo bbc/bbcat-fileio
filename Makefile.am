@@ -21,7 +21,7 @@ bbcat-fileio-$(BBCAT_FILEIO_MAJORMINOR)-uninstalled.pc: bbcat-fileio-uninstalled
 
 BUILT_SOURCES = bbcat-fileio-$(BBCAT_FILEIO_MAJORMINOR)-uninstalled.pc gitbranch.txt
 
-CLEANFILES = bbcat-fileio-$(BBCAT_FILEIO_MAJORMINOR).pc bbcat-fileio-$(BBCAT_FILEIO_MAJORMINOR)-uninstalled.pc src/SelfRegisteringObjects.h src/version.h src/version.cpp gitbranch.txt .branch
+CLEANFILES = bbcat-fileio-$(BBCAT_FILEIO_MAJORMINOR).pc bbcat-fileio-$(BBCAT_FILEIO_MAJORMINOR)-uninstalled.pc src/register.cpp gitbranch.txt .branch
 
 ACLOCAL_FLAGS = -I m4
 

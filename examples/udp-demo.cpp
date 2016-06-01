@@ -23,8 +23,9 @@
 
 using namespace bbcat;
 
-// ensure the version numbers of the linked libraries and registered
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_base_version);
+BBC_AUDIOTOOLBOX_START
+extern bool bbcat_register_bbcat_base();
+BBC_AUDIOTOOLBOX_END
 
 typedef struct
 {
@@ -108,11 +109,11 @@ int main(int argc, char *argv[])
 {
   uint_t port = 4244, buflen = 100;
 
+  // ensure libraries are set up
+  bbcat_register_bbcat_base();
+  
   // allow CTRL-C to gracefully stop program
   signal(SIGINT, chkabort);
-  
-  // print library versions (the actual loaded versions, if dynamically linked)
-  printf("Versions:\n%s\n", LoadedVersions::Get().GetVersionsList().c_str());
 
   if ((argc >= 2) && ((strcmp(argv[1], "-help") == 0) || (strcmp(argv[1], "-h") == 0)))
   {

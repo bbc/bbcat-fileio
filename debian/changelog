@@ -1,3 +1,15 @@
+bbcat-fileio (0.1.2.2) quantal; urgency=low
+
+  * Added support for new CMake build mechanism
+  * Added explicit library registration function (see README)
+  * Changed to use new threading mechanism
+  * Changed to use new min/max/limit mechanism
+  * Removed SoundObjectFile and re-organized ADMAudioFileSamples
+  * Fixed writing of RF64 files (>4GB)
+  * Moved axml and chna chunks to *after* data chunk to allow one-pass ADM WAV file writing
+
+ -- Richard Day <richard.day@bbc.co.uk>  Tue, 26 Apr 2016 17:00:00 +0100
+
 bbcat-fileio (0.1.2.1) quantal; urgency=low
 
   * Moved parts of bbcat-audioobjects to bbcat-fileio to separate it from pure ADM support.

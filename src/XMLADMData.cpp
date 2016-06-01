@@ -53,61 +53,46 @@ std::vector<XMLADMData::PROVIDER>& XMLADMData::GetProviderList()
 /*--------------------------------------------------------------------------------*/
 bool XMLADMData::LoadStandardDefinitions(const std::string& filename)
 {
-  static const std::string _paths[] = {
-    "",
-    ".",
-    BBCAT_FILEIO_DATA_FILES,
+  static const char *paths[] =
+  {
+    "{env:BBCATFILEIOSHAREDIR}",    // BBCATFILEIOSHAREDIR environment variable
+    "{fileiosharedir}",             // system parameter 'fileiosharedir'
+    "{sharedir}/bbcat-fileio",      // use system parameter
+    "share",                        // relative location
   };
-  std::vector<std::string> paths;
-  std::string filename2;
-  uint_t i;
+  std::string filename2 = filename;
   bool success = false;
 
+  // try various sources for the filename if it is empty
+  if (filename2.empty()) filename2 = SystemParameters::Get().Substitute("{env:BBCATSTANDARDDEFINITIONSFILE}");
+  if (filename2.empty()) SystemParameters::Get().GetSubstituted("standarddefinitionsfile", filename2);
+  // use default name if none above work
+  if (filename2.empty()) filename2 = "standarddefinitions.xml";
+
+  BBCDEBUG3(("Using '%s' as filename for standard definitions file", filename2.c_str()));
+  
   // delete any existing objects
   Delete();
 
-  // detect additional paths using system parameters system
-  std::string str;
-  if (SystemParameters::Get().Get("fileiodatapath", str))
+  if (!(filename2 = FindFile(filename2, paths, NUMBEROF(paths))).empty())
   {
-    // split string by ';' to get list of paths
-    SplitString(str, paths, ';');
-  }
+    BBCDEBUG("Found standard definitions file '%s' as '%s'", filename.c_str(), filename2.c_str());
 
-  // add hard-coded paths
-  for (i = 0; i < NUMBEROF(_paths); i++)
-  {
-    paths.push_back(_paths[i]);
-  }
-  
-  for (i = 0; i < paths.size(); i++)
-  {
-    if (filename != "") filename2 = EnhancedFile::catpath(paths[i], filename);
-    else                filename2 = EnhancedFile::catpath(paths[i], DefaultStandardDefinitionsFile);    // use default filename if none supplied
-
-    if (EnhancedFile::exists(filename2.c_str()))
+    if (ReadXMLFromFile(filename2.c_str()))
     {
-      BBCDEBUG("Found standard definitions file '%s' as '%s'", filename.c_str(), filename2.c_str());
+      ADMOBJECTS_IT it;
 
-      if (ReadXMLFromFile(filename2.c_str()))
+      // set standard def flag on all loaded objects
+      for (it = admobjects.begin(); it != admobjects.end(); ++it)
       {
-        ADMOBJECTS_IT it;
-
-        // set standard def flag on all loaded objects
-        for (it = admobjects.begin(); it != admobjects.end(); ++it)
-        {
-          it->second->SetStandardDefinition();
-        }
-
-        success = true;
+        it->second->SetStandardDefinition();
       }
-      else BBCERROR("Failed to read standard definitions file '%s'", filename2.c_str());
-      break;
-    }
-    else BBCDEBUG2(("Standard definitions file '%s' doesn't exist (from '%s' and '%s')", filename2.c_str(), paths[i].c_str(), filename.c_str()));
-  }
 
-  if (i == NUMBEROF(paths)) BBCERROR("Failed to find standard definitions file '%s'", filename.c_str());
+      success = true;
+    }
+    else BBCERROR("Failed to read standard definitions file '%s'", filename2.c_str());
+  }
+  else BBCDEBUG1(("Standard definitions file '%s' doesn't exist", filename2.c_str()));
 
   return success;
 }
@@ -145,20 +130,19 @@ bool XMLADMData::SetChna(const uint8_t *data, uint64_t len)
       id.assign(chna.UIDs[i].UID, sizeof(chna.UIDs[i].UID));
       id = id.substr(0, id.find(terminator));
 
-      if ((track = dynamic_cast<ADMAudioTrack *>(Create(ADMAudioTrack::Type, id, ""))) != NULL)
+      // delete any existing ADMAudioTracks of the same ID
+      if ((track = dynamic_cast<ADMAudioTrack *>(Create(ADMAudioTrack::Type, id, "", true))) != NULL)
       {
         XMLValue tvalue, pvalue;
 
         track->SetTrackNum(chna.UIDs[i].TrackNum - 1);
 
-        tvalue.attr = false;
         tvalue.name = ADMAudioTrackFormat::Reference;
         tvalue.value.assign(chna.UIDs[i].TrackRef, sizeof(chna.UIDs[i].TrackRef));
         // trim any zero bytes off the end of the string
         tvalue.value = tvalue.value.substr(0, tvalue.value.find(terminator));
         track->AddValue(tvalue);
 
-        pvalue.attr = false;
         pvalue.name = ADMAudioPackFormat::Reference;
         pvalue.value.assign(chna.UIDs[i].PackRef, sizeof(chna.UIDs[i].PackRef));
         // trim any zero bytes off the end of the string
@@ -187,11 +171,12 @@ bool XMLADMData::SetChna(const uint8_t *data, uint64_t len)
 /** Read ADM data from the axml RIFF chunk
  *
  * @param data ptr to axml chunk data (MUST be terminated!)
+ * @param finalise true to attempt to finalise ADM after loading
  *
  * @return true if data read successfully
  */
 /*--------------------------------------------------------------------------------*/
-bool XMLADMData::SetAxml(const char *data)
+bool XMLADMData::SetAxml(const char *data, bool finalise)
 {
   bool success = false;
 
@@ -199,7 +184,7 @@ bool XMLADMData::SetAxml(const char *data)
 
   if (TranslateXML(data))
   {
-    Finalise();
+    if (finalise) Finalise();
 
     success = true;
   }
@@ -211,11 +196,12 @@ bool XMLADMData::SetAxml(const char *data)
 /** Read ADM data from explicit XML
  *
  * @param data XML data stored as a string
+ * @param finalise true to attempt to finalise ADM after loading
  *
  * @return true if data read successfully
  */
 /*--------------------------------------------------------------------------------*/
-bool XMLADMData::SetAxml(const std::string& data)
+bool XMLADMData::SetAxml(const std::string& data, bool finalise)
 {
   bool success = false;
 
@@ -223,7 +209,7 @@ bool XMLADMData::SetAxml(const std::string& data)
 
   if (TranslateXML(data.c_str()))
   {
-    Finalise();
+    if (finalise) Finalise();
 
     success = true;
   }
@@ -235,11 +221,12 @@ bool XMLADMData::SetAxml(const std::string& data)
 /** Load CHNA data from file
  *
  * @param filename file containing chna in text form
+ * @param finalise true to attempt to finalise ADM after loading
  *
  * @return true if data read successfully
  */
 /*--------------------------------------------------------------------------------*/
-bool XMLADMData::ReadChnaFromFile(const std::string& filename)
+bool XMLADMData::ReadChnaFromFile(const std::string& filename, bool finalise)
 {
   EnhancedFile fp;
   bool success = false;
@@ -279,12 +266,10 @@ bool XMLADMData::ReadChnaFromFile(const std::string& filename)
 
                 track->SetTrackNum(tracknum - 1);
 
-                tvalue.attr = false;
                 tvalue.name = ADMAudioTrackFormat::Reference;
                 tvalue.value = trackformat;
                 track->AddValue(tvalue);
 
-                pvalue.attr = false;
                 pvalue.name = ADMAudioPackFormat::Reference;
                 pvalue.value = packformat;
                 track->AddValue(pvalue);
@@ -321,7 +306,7 @@ bool XMLADMData::ReadChnaFromFile(const std::string& filename)
 
     fp.fclose();
 
-    if (success) Finalise();
+    if (success && finalise) Finalise();
   }
 
   return success;
@@ -331,11 +316,12 @@ bool XMLADMData::ReadChnaFromFile(const std::string& filename)
 /** Load ADM data from file
  *
  * @param filename file containing XML
+ * @param finalise true to attempt to finalise ADM after loading
  *
  * @return true if data read successfully
  */
 /*--------------------------------------------------------------------------------*/
-bool XMLADMData::ReadXMLFromFile(const std::string& filename)
+bool XMLADMData::ReadXMLFromFile(const std::string& filename, bool finalise)
 {
   EnhancedFile fp;
   bool success = false;
@@ -352,7 +338,7 @@ bool XMLADMData::ReadXMLFromFile(const std::string& filename)
       len = fp.fread(buffer, sizeof(char), len);
       buffer[len] = 0;
 
-      success = SetAxml(buffer);
+      success = SetAxml(buffer, finalise);
 
       delete[] buffer;
     }
@@ -370,7 +356,7 @@ bool XMLADMData::ReadXMLFromFile(const std::string& filename)
  *
  * @param chna ptr to chna chunk data
  * @param chnalength length of chna data
- * @param axml ptr to axml chunk data (MUST be terminated like a string) 
+ * @param axml ptr to axml chunk data (MUST be terminated like a string)
  *
  * @return true if data read successfully
  */
@@ -540,7 +526,8 @@ ADMObject *XMLADMData::Parse(const std::string& type, void *userdata)
 
   ParseHeader(header, type, userdata);
 
-  if ((obj = Create(type, header.id, header.name)) != NULL)
+  // delete any existing object of the same ID UNLESS it's an ADMAudioTrack
+  if ((obj = Create(type, header.id, header.name, (type != ADMAudioTrack::Type))) != NULL)
   {
     ParseValues(obj, userdata);
     PostParse(obj, userdata);

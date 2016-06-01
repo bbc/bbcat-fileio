@@ -5,14 +5,15 @@
 
 #include <bbcat-base/ThreadLock.h>
 
+#include "PlaybackTracker.h"
+
 BBC_AUDIOTOOLBOX_START
 
-class SoundFileSamples;
-class Playlist
+class Playlist : public PlaybackTracker
 {
 public:
   Playlist();
-  ~Playlist();
+  virtual ~Playlist();
 
   /*--------------------------------------------------------------------------------*/
   /** Return whether the playlist is empty
@@ -27,6 +28,12 @@ public:
    */
   /*--------------------------------------------------------------------------------*/
   void AddFile(SoundFileSamples *file);
+
+  /*--------------------------------------------------------------------------------*/
+  /** Update playlist length (e.g. after modifying a file)
+   */
+  /*--------------------------------------------------------------------------------*/
+  void UpdatePlaylistLength();
 
   /*--------------------------------------------------------------------------------*/
   /** Clear playlist
@@ -110,7 +117,25 @@ public:
   /** Return current file or NULL if the end of the list has been reached
    */
   /*--------------------------------------------------------------------------------*/
-  SoundFileSamples *GetFile();
+  SoundFileSamples *GetFile() const;
+
+  /*--------------------------------------------------------------------------------*/
+  /** Return file at specific index or NULL if index is out of range
+   */
+  /*--------------------------------------------------------------------------------*/
+  SoundFileSamples *GetFileAtIndex(uint_t index) const;
+  
+  /*--------------------------------------------------------------------------------*/
+  /** Return last file in list (or NULL)
+   */
+  /*--------------------------------------------------------------------------------*/
+  SoundFileSamples *GetLastFile() const;
+
+  /*--------------------------------------------------------------------------------*/
+  /** Return index of specified file (or -1)
+   */
+  /*--------------------------------------------------------------------------------*/
+  int GetIndexOf(SoundFileSamples *file) const;
 
   /*--------------------------------------------------------------------------------*/
   /** Return max number of audio channels of playlist
@@ -163,12 +188,22 @@ public:
   /*--------------------------------------------------------------------------------*/
   /** Move to specified playlist index
    *
+   * @param index new playback index
+   * @param fromstart true to play new item from start, false to start playing new item from the *same* place as currently being played
+   * @param force true to force position change immediately (see below)
+   *
    * @note setting force to true may cause clicks!
    * @note setting force to false causes a fade down *before* and a fade up *after*
    * changing the position which means this doesn't actually change the position straight away!
    */
   /*--------------------------------------------------------------------------------*/
-  bool SetPlaybackIndex(uint_t index, bool force);
+  bool SetPlaybackIndex(uint_t index, bool fromstart, bool force);
+  
+  /*--------------------------------------------------------------------------------*/
+  /** Return playback progress object
+   */
+  /*--------------------------------------------------------------------------------*/
+  virtual PLAYBACKPROGRESS GetPlaybackProgress() const;
 
   /*--------------------------------------------------------------------------------*/
   /** Read samples into buffer

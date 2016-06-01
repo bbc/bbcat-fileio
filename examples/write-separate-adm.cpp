@@ -8,20 +8,15 @@
 
 using namespace bbcat;
 
-// ensure the version numbers of the linked libraries and registered
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_base_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_dsp_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_adm_version);
-BBC_AUDIOTOOLBOX_REQUIRE(bbcat_fileio_version);
-
-// ensure the TinyXMLADMData object file is kept in the application
-BBC_AUDIOTOOLBOX_REQUIRE(TinyXMLADMData);
+BBC_AUDIOTOOLBOX_START
+extern bool bbcat_register_bbcat_fileio();
+BBC_AUDIOTOOLBOX_END
 
 int main(int argc, char *argv[])
 {
-  // print library versions (the actual loaded versions, if dynamically linked)
-  printf("Versions:\n%s\n", LoadedVersions::Get().GetVersionsList().c_str());
-
+  // ensure libraries are set up
+  bbcat_register_bbcat_fileio();
+ 
   if (argc < 2)
   {
     fprintf(stderr, "Usage: write-separate-adm <filename>\n");
