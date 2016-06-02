@@ -10,15 +10,12 @@
 #include <bbcat-fileio/ADMRIFFFile.h>
 #include <bbcat-fileio/TinyXMLADMData.h>
 #include <bbcat-fileio/RIFFChunk_Definitions.h>
+#include <bbcat-fileio/register.h>
 
 #define STANDARD_DEF_FILE "StandardDefinitionsADM.xml"
 #define SAMPLE_RATE 48000
 
 using namespace bbcat;
-
-BBC_AUDIOTOOLBOX_START
-extern bool bbcat_register_bbcat_fileio();
-BBC_AUDIOTOOLBOX_END
 
 typedef struct
 {

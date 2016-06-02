@@ -7,12 +7,9 @@
 #include <bbcat-adm/ADMXMLGenerator.h>
 #include <bbcat-fileio/ADMRIFFFile.h>
 #include <bbcat-fileio/ADMAudioFileSamples.h>
+#include <bbcat-fileio/register.h>
 
 using namespace bbcat;
-
-BBC_AUDIOTOOLBOX_START
-extern bool bbcat_register_bbcat_fileio();
-BBC_AUDIOTOOLBOX_END
 
 int main(int argc, char *argv[])
 {
@@ -40,68 +37,98 @@ int main(int argc, char *argv[])
     
     if (dstfile.Create(argv[2], srcfile.GetSampleRate(), nchannels, format))
     {
+      ADMData *adm = dstfile.GetADM();
+      
       // copy ADM to destination
-      dstfile.GetADM()->Copy(*srcfile.GetADM());
+      adm->Copy(*srcfile.GetADM());
 
+      /*--------------------------------------------------------------------------------*/
+      /** Track specific processing
+       *
+       * This is used to process *all* blockformats on a *specific* track
+       *
+       * In this case:
+       * 1. Set position of track 0
+       */
+      /*--------------------------------------------------------------------------------*/
+      // adjust position of track 0
       {
-        // adds extra data to ADM (at root node):
-        //
-        // <additionaldata>
-        //  <data index="0" subtype="integer" type="numerical">7</data>
-        // 	<data index="1" subtype="decimal" type="numerical">3.4</data>
-        // 	<data index="2" type="text">text</data>
-        // </additionaldata>
-        //
-        // there is no limit to the size of the tree that can be added
-        //
-        XMLValues *values = dstfile.GetADM()->CreateNonADMXML("");
+        // get list of audio objects
+        std::vector<const ADMAudioObject *> objectlist;
+        uint_t i, j;
+      
+        adm->GetAudioObjectList(objectlist);
 
-        if (values) {
-          XMLValues subvalues;
-          XMLValue  object;
-          
-          // add extra layer (just set name because sub values will be added)
-          object.SetValue("additionaldata", "");
-          
-          // add values to subvalues
+        // find audio object on track 0 (of the WAV file)
+        for (i = 0; i < (uint_t)objectlist.size(); i++)
+        {
+          ADMAudioChannelFormat *channelformat;
+
+          // find channelformat of track 0 within this object (if it exists)
+          if ((channelformat = objectlist[i]->GetChannelFormat(0)) != NULL)
           {
-            XMLValue value;
+            std::vector<ADMAudioBlockFormat *>& blockformats = channelformat->GetBlockFormatRefs();
 
-            value.SetValue("data", "7");
-            value.SetAttribute("index", "0");
-            value.SetAttribute("type", "numerical");
-            value.SetAttribute("subtype", "integer");
+            printf("Found list of block formats for track 0\n");
 
-            subvalues.AddValue(value);
+            // process all block formats
+            for (j = 0; j < (uint_t)blockformats.size(); j++)
+            {
+              AudioObjectParameters& parameters  = blockformats[j]->GetObjectParameters();
+
+              // adjust position in block
+              Position p;
+              p.pos.az = 0.0;
+              p.pos.el = 40.0;
+              p.pos.d  = 1.0;
+              p.polar  = true;
+              parameters.SetPosition(p);
+            }
           }
-          {
-            XMLValue value;
-
-            value.SetValue("data", "3.4");
-            value.SetAttribute("index", "1");
-            value.SetAttribute("type", "numerical");
-            value.SetAttribute("subtype", "decimal");
-
-            subvalues.AddValue(value);
-          }
-          {
-            XMLValue value;
-
-            value.SetValue("data", "text");
-            value.SetAttribute("index", "2");
-            value.SetAttribute("type", "text");
-
-            subvalues.AddValue(value);
-          }
-
-          // add subvalues to object
-          object.AddSubValues(subvalues);
-
-          // add object into main XML list
-          values->AddValue(object);
         }
       }
 
+      /*--------------------------------------------------------------------------------*/
+      /** Generic processing
+       *
+       * This is used to process *all* blockformats on *all* tracks
+       *
+       * In this case:
+       * 1. Correctly set 'cartesian' ADM parameter
+       * 2. Strip 'sourcetype' parameter
+       */
+      /*--------------------------------------------------------------------------------*/
+      // process ALL blockformats
+      {
+        // get access to blockformats through channelsformats
+        std::vector<ADMObject *> channelformats;
+        uint_t i, j;
+        
+        adm->GetWritableObjects(ADMAudioChannelFormat::Type, channelformats);
+        for (i = 0; i < (uint_t)channelformats.size(); i++)
+        {
+          ADMAudioChannelFormat *channelformat;
+
+          // cast up to correct type
+          if ((channelformat = dynamic_cast<ADMAudioChannelFormat *>(channelformats[i])) != NULL)
+          {
+            std::vector<ADMAudioBlockFormat *>& blockformats = channelformat->GetBlockFormatRefs();
+
+            for (j = 0; j < (uint_t)blockformats.size(); j++)
+            {
+              // get access to modifable AudioObjectParameters for blockformat
+              AudioObjectParameters& parameters  = blockformats[j]->GetObjectParameters();
+
+              // force Cartesian parameter
+              parameters.SetCartesian(!parameters.GetPosition().polar);
+
+              // delete 'sourcetype' parameter from object parameters
+              parameters.ResetOtherValue("sourcetype");
+            }
+          }
+        }
+      }
+      
       //printf("XML:\n%s", ADMXMLGenerator::GetAxml(dstfile.GetADM()).c_str());
              
       // get audio samples handler for entire file
@@ -112,12 +139,22 @@ int main(int argc, char *argv[])
       uint_t nframes, maxframes = 1024, pc = ~0;
       uint64_t pos = 0, length = srcfile.GetSampleLength();
       std::vector<uint8_t> buffer(maxframes * srcfile.GetChannels() * srcfile.GetBytesPerSample());
+
+      // set number of frames to silence at beginning of file
+      uint_t nsilenceframes = 0;
       
       // copy ALL samples from src to dst
       while ((nframes = src->ReadSamples(&buffer[0], format, 0, nchannels, maxframes)) > 0)
       {
+        uint_t nsilenceframes1 = std::min(nsilenceframes, nframes);
         uint_t nframes1;
 
+        if (nsilenceframes1)
+        {
+          memset(&buffer[0], 0, nsilenceframes1 * nchannels * srcfile.GetBytesPerSample());
+          nsilenceframes -= nsilenceframes1;
+        }
+        
         if ((nframes1 = dst->WriteSamples(&buffer[0], format, 0, nchannels, nframes)) < nframes)
         {
           fprintf(stderr, "Unable to write all frames from source to destination (%u < %u)\n", nframes1, nframes);

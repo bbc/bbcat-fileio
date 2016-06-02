@@ -3,12 +3,9 @@
 #include <stdlib.h>
 
 #include <bbcat-fileio/XMLADMData.h>
+#include <bbcat-fileio/register.h>
 
 using namespace bbcat;
-
-BBC_AUDIOTOOLBOX_START
-extern bool bbcat_register_bbcat_fileio();
-BBC_AUDIOTOOLBOX_END
 
 int main(int argc, char *argv[])
 {

@@ -24,6 +24,7 @@ set(_headers
 	SoundFileAttributes.h
 	TinyXMLADMData.h
 	XMLADMData.h
+	register.h
 )
 
 # auto-generate register.cpp 
