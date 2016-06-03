@@ -57,8 +57,8 @@ bool XMLADMData::LoadStandardDefinitions(const std::string& filename)
   {
     "{env:BBCATFILEIOSHAREDIR}",    // BBCATFILEIOSHAREDIR environment variable
     "{fileiosharedir}",             // system parameter 'fileiosharedir'
-    "{sharedir}/bbcat-fileio",      // use system parameter
-    "share",                        // relative location
+    "share",                        // local location
+    "{sharedir}/bbcat-fileio",      // global location
   };
   std::string filename2 = filename;
   bool success = false;
