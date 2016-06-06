@@ -72,11 +72,12 @@ protected:
   /** Parse audioBlockFormat XML object
    *
    * @param name parent name (for BBCDEBUGGING only)
+   * @param owner audioChannelFormat owner of block format
    * @param obj audioBlockFormat object
    * @param userdata user suppled data
    */
   /*--------------------------------------------------------------------------------*/
-  virtual void ParseValues(const std::string& name, ADMAudioBlockFormat *obj, void *userdata);
+  virtual void ParseValues(const std::string& name, ADMAudioChannelFormat *owner, ADMAudioBlockFormat *obj, void *userdata);
 
   /*--------------------------------------------------------------------------------*/
   /** Parse attributes into a list of XML values

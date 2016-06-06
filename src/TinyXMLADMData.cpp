@@ -253,11 +253,12 @@ void TinyXMLADMData::ParseAttributes(const std::string& name, const std::string&
 /** Parse audioBlockFormat XML object
  *
  * @param name parent name (for DEBUGGING only)
+ * @param owner audioChannelFormat owner of block format
  * @param obj audioBlockFormat object
  * @param userdata user suppled data
  */
 /*--------------------------------------------------------------------------------*/
-void TinyXMLADMData::ParseValues(const std::string& name, ADMAudioBlockFormat *obj, void *userdata)
+void TinyXMLADMData::ParseValues(const std::string& name, ADMAudioChannelFormat *owner, ADMAudioBlockFormat *obj, void *userdata)
 {
   const TiXmlNode *node = (const TiXmlNode *)userdata;
   const TiXmlNode *subnode;
@@ -276,7 +277,7 @@ void TinyXMLADMData::ParseValues(const std::string& name, ADMAudioBlockFormat *o
   }
   
   // set values in object
-  obj->SetValues(values);
+  obj->SetValues(values, owner);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -315,7 +316,7 @@ void TinyXMLADMData::ParseValues(ADMObject *obj, void *userdata)
           // parse this subnode as a section
           if ((block = new ADMAudioBlockFormat) != NULL)
           {
-            ParseValues(obj->ToString() + ":BlockFormat", block, (void *)subnode);
+            ParseValues(obj->ToString() + ":BlockFormat", channel, block, (void *)subnode);
             channel->Add(block);
           }
           else BBCERROR("Parsed object was not an AudioBlockFormat object");
