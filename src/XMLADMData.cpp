@@ -90,7 +90,7 @@ bool XMLADMData::LoadStandardDefinitions(const std::string& filename)
 
       success = true;
     }
-    else BBCERROR("Failed to read standard definitions file '%s'", filename2.c_str());
+    else LogError("Failed to read standard definitions file '%s'", filename2.c_str());
   }
   else BBCDEBUG1(("Standard definitions file '%s' doesn't exist", filename2.c_str()));
 
@@ -116,7 +116,7 @@ bool XMLADMData::SetChna(const uint8_t *data, uint64_t len)
   // create string with a single 0 byte in it to detect terminators
   terminator.push_back(0);
 
-  if (maxuids < chna.UIDCount) BBCERROR("Warning: chna specifies %u UIDs but chunk has only length for %u", (uint_t)chna.UIDCount, maxuids);
+  if (maxuids < chna.UIDCount) LogError("Warning: chna specifies %u UIDs but chunk has only length for %u", (uint_t)chna.UIDCount, maxuids);
 
   uint16_t i;
   for (i = 0; (i < chna.UIDCount) && (i < maxuids); i++)
@@ -158,7 +158,7 @@ bool XMLADMData::SetChna(const uint8_t *data, uint64_t len)
                 tvalue.value.c_str(),
                 pvalue.value.c_str()));
       }
-      else BBCERROR("Failed to create AudioTrack for UID %u", i);
+      else LogError("Failed to create AudioTrack for UID %u", i);
     }
   }
 
@@ -285,20 +285,20 @@ bool XMLADMData::ReadChnaFromFile(const std::string& filename, bool finalise)
               }
               else
               {
-                BBCERROR("Failed to create AudioTrack for UID %u", tracknum);
+                LogError("Failed to create AudioTrack for UID %u", tracknum);
                 success = false;
               }
             }
           }
           else
           {
-            BBCERROR("CHNA line '%s' word 1 ('%s') should be a track number", buffer, words[0].c_str());
+            LogError("CHNA line '%s' word 1 ('%s') should be a track number", buffer, words[0].c_str());
             success = false;
           }
         }
         else
         {
-          BBCERROR("CHNA line '%s' requires 4 words", buffer);
+          LogError("CHNA line '%s' requires 4 words", buffer);
           success = false;
         }
       }
@@ -342,11 +342,11 @@ bool XMLADMData::ReadXMLFromFile(const std::string& filename, bool finalise)
 
       delete[] buffer;
     }
-    else BBCERROR("Failed to allocate %s chars for file '%s'", StringFrom(len + 1).c_str(), filename.c_str());
+    else LogError("Failed to allocate %s chars for file '%s'", StringFrom(len + 1).c_str(), filename.c_str());
 
     fp.fclose();
   }
-  else BBCERROR("Failed to open file '%s' for reading", filename.c_str());
+  else LogError("Failed to open file '%s' for reading", filename.c_str());
 
   return success;
 }
