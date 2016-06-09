@@ -198,6 +198,18 @@ public:
    */
   /*--------------------------------------------------------------------------------*/
   bool SetPlaybackIndex(uint_t index, bool fromstart, bool force);
+
+  /*--------------------------------------------------------------------------------*/
+  /** Return number of samples used during fade up or down
+   */
+  /*--------------------------------------------------------------------------------*/
+  uint_t GetFadeSamples() const {return fadesamples;}
+
+  /*--------------------------------------------------------------------------------*/
+  /** Set number of samples used during fade up or down
+   */
+  /*--------------------------------------------------------------------------------*/
+  void SetFadeSamples(uint_t n) {fadesamples = n;}
   
   /*--------------------------------------------------------------------------------*/
   /** Return playback progress object
