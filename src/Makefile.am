@@ -41,7 +41,8 @@ pkginclude_HEADERS =							\
 	RIFFFile.h									\
 	SoundFileAttributes.h						\
 	TinyXMLADMData.h							\
-	XMLADMData.h
+	XMLADMData.h								\
+	register.h
 
 #CLEANFILES = register.cpp
 
