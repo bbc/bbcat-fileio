@@ -1,3 +1,13 @@
+UNMAINTAINED
+
+This library is unmaintained. Most functionality can be implemented with
+libbw64 and libadm:
+
+https://github.com/ebu/libbw64
+https://github.com/ebu/libadm
+
+--------------------------------------------------------------------------------
+
 Purpose
 
 File I/O handling library
